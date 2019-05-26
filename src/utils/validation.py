@@ -1,5 +1,5 @@
 import numpy as np
-from ..exceptions import DimensionError
+from exceptions import DimensionError
 
 
 def check_ratings(ratings, n_user, n_item, max_rating=None, min_rating=None):
