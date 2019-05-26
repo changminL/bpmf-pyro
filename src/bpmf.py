@@ -1,33 +1,31 @@
-from __future__ import absolute_import, division, print_function
+"""
+Reference paper: "Bayesian Probabilistic Matrix Factorization using MCMC"
+                 R. Salakhutdinov and A.Mnih.
+                 25th International Conference on Machine Learning (ICML-2008)
 
-import argparse
+Reference Matlab code: http://www.cs.toronto.edu/~rsalakhu/BPMF.html
+"""
+
 import logging
-
-import pandas as pd
-import torch
-
 from six.moves import xrange
 import numpy as np
 from numpy.linalg import inv, cholesky
 from numpy.random import RandomState
 from scipy.stats import wishart
 
-import data
-import pyro
-import pyro.distributions as dist
-import pyro.poutine as poutine
-from pyro.infer.mcmc import MCMC, NUTS
-
+from .base import ModelBase
 from .exceptions import NotFittedError
 from .utils.datasets import build_user_item_matrix
 from .utils.validation import check_ratings
 from .utils.evaluation import RMSE
 
-logging.basicConfig(format='%(message)s', level=logging.INFO)
-pyro.enable_validation(True)
-pyro.set_rng_seed(0)
+logger = logging.getLogger(__name__)
 
-class BPMF():
+
+class BPMF(ModelBase):
+    """Bayesian Probabilistic Matrix Factorization
+    """
+
     def __init__(self, n_user, n_item, n_feature, beta=2.0, beta_user=2.0,
                  df_user=None, mu0_user=0., beta_item=2.0, df_item=None,
                  mu0_item=0., converge=1e-5, seed=None, max_rating=None,
@@ -80,18 +78,69 @@ class BPMF():
         self.ratings_csr_ = None
         self.ratings_csc_ = None
 
+    def _update_average_features(self, iteration):
+        self.avg_user_features_ *= (iteration / (iteration + 1.))
+        self.avg_user_features_ += (self.user_features_ / (iteration + 1.))
+        self.avg_item_features_ *= (iteration / (iteration + 1.))
+        self.avg_item_features_ += (self.item_features_ / (iteration + 1.))
+
+    def fit(self, ratings, n_iters=50):
+
         check_ratings(ratings, self.n_user, self.n_item,
                       self.max_rating, self.min_rating)
 
         self.mean_rating_ = np.mean(ratings[:, 2])
 
-        # only two different ways of building the matrix.
+        # only two different ways of building the matrix. 
         # csr user-item matrix for fast row access (user update)
         self.ratings_csr_ = build_user_item_matrix(
             self.n_user, self.n_item, ratings)
         # keep a csc matrix for fast col access (item update)
-        self.ratings_csc_ = self.ratings_csr_.tocsc()
-        
+        self.ratings_csc_ = self.ratings_csr_.tocsc() 
+
+        last_rmse = None
+        for iteration in xrange(n_iters):
+            # THE FOLLOWING ARE THE GIBBS SAMPLING STEP 
+            # update item & user parameter
+            self._update_item_params()
+            self._update_user_params()
+
+            # update item & user features
+            self._udpate_item_features()
+            self._update_user_features()
+
+            # in order to make a meaningful MCMC
+            # we need to sample from the correct distribution
+            self._update_average_features(self.iter_)
+            self.iter_ += 1
+
+            # compute RMSE
+            train_preds = self.predict(ratings[:, :2])
+            train_rmse = RMSE(train_preds, ratings[:, 2])
+            logger.info("iteration: %d, train RMSE: %.6f", self.iter_, train_rmse)
+            # stop when converge
+            if last_rmse and abs(train_rmse - last_rmse) < self.converge:
+                logger.info('converges at iteration %d. stop.', self.iter_)
+                break
+            else:
+                last_rmse = train_rmse
+        return self
+
+    def predict(self, data):
+        if not self.mean_rating_:
+            raise NotFittedError()
+
+        u_features = self.avg_user_features_.take(data.take(0, axis=1), axis=0)
+        i_features = self.avg_item_features_.take(data.take(1, axis=1), axis=0)
+        preds = np.sum(u_features * i_features, 1) + self.mean_rating_
+
+        if self.max_rating:  # cut the prediction rate. 
+            preds[preds > self.max_rating] = self.max_rating
+
+        if self.min_rating:
+            preds[preds < self.min_rating] = self.min_rating
+        return preds
+
     def _update_item_params(self):
         N = self.n_item
         X_bar = np.mean(self.item_features_, 0).reshape((self.n_feature, 1))
@@ -119,35 +168,44 @@ class BPMF():
         mu_mean = (self.beta_item * self.mu0_item + N * X_bar) / \
             (self.beta_item + N)
         mu_var = cholesky(inv(np.dot(self.beta_item + N, self.alpha_item)))
-        
-        return mu_mean, mu_var
+        # print 'lam', lam.shape
+        self.mu_item = mu_mean + np.dot(
+            mu_var, self.rand_state.randn(self.n_feature, 1))
+        # print 'mu_item', self.mu_item.shape
 
     def _update_user_params(self):
-        # same as _update_user_params                                                                            
+        # same as _update_user_params
         N = self.n_user
         X_bar = np.mean(self.user_features_, 0).reshape((self.n_feature, 1))
         S_bar = np.cov(self.user_features_.T)
+
         # mu_{0} - U_bar
-        diff_X_bar = self.mu0_user - X_bar                                                               
-        # W_{0}_star                                                                                             
-        WI_post = inv(inv(self.WI_user) + 
-                      N * S_bar + np.dot(diff_X_bar, diff_X_bar.T) * 
+        diff_X_bar = self.mu0_user - X_bar
+
+        # W_{0}_star
+        WI_post = inv(inv(self.WI_user) +
+                      N * S_bar +
+                      np.dot(diff_X_bar, diff_X_bar.T) *
                       (N * self.beta_user) / (self.beta_user + N))
         # Note: WI_post and WI_post.T should be the same.
         #       Just make sure it is symmertic here
-        WI_post = (WI_post + WI_post.T) / 2.0                                                            
+        WI_post = (WI_post + WI_post.T) / 2.0
+
         # update alpha_user
         df_post = self.df_user + N
         # LAMBDA_{U} ~ W(W{0}_star, df_post)
-        self.alpha_user = wishart.rvs(df_post, WI_post, 1, self.rand_state)                              
+        self.alpha_user = wishart.rvs(df_post, WI_post, 1, self.rand_state)
+
         # update mu_user
-        # mu_{0}_star = (beta_{0} * mu_{0} + N * U_bar) / (beta_{0} + N)                                         
-        mu_mean = (self.beta_user * self.mu0_user + N * X_bar) / (self.beta_user + N)
+        # mu_{0}_star = (beta_{0} * mu_{0} + N * U_bar) / (beta_{0} + N)
+        mu_mean = (self.beta_user * self.mu0_user + N * X_bar) / \
+                  (self.beta_user + N)
 
-        # decomposed inv(beta_{0}_star * LAMBDA_{U})                                                             
+        # decomposed inv(beta_{0}_star * LAMBDA_{U})
         mu_var = cholesky(inv(np.dot(self.beta_user + N, self.alpha_user)))
-
-        return mu_mean, mu_var
+        # sample multivariate gaussian
+        self.mu_user = mu_mean + np.dot(
+            mu_var, self.rand_state.randn(self.n_feature, 1))
 
     def _udpate_item_features(self):
         # Gibbs sampling for item features
@@ -158,15 +216,15 @@ class BPMF():
             rating = np.reshape(rating, (rating.shape[0], 1))
 
             covar = inv(self.alpha_item +
-                        self.beta * np.dot(features.T, features))
+                        self.beta * np.dot(features.T, features))  #eq.12
             lam = cholesky(covar)
 
             temp = (self.beta * np.dot(features.T, rating) +
-                    np.dot(self.alpha_item, self.mu_item))
+                    np.dot(self.alpha_item, self.mu_item))  # eq.13 
 
             mean = np.dot(covar, temp)
- 
-            temp_feature = pyro.sample('i_temp_feature' + str(item_id), dist.Normal(mean, lam))
+            temp_feature = mean + np.dot(
+                lam, self.rand_state.randn(self.n_feature, 1))
             self.item_features_[item_id, :] = temp_feature.ravel()
 
     def _update_user_features(self):
@@ -178,59 +236,13 @@ class BPMF():
             rating = np.reshape(rating, (rating.shape[0], 1))
 
             covar = inv(
-                self.alpha_user + self.beta * np.dot(features.T, features))
+                self.alpha_user + self.beta * np.dot(features.T, features)) #eq.12
             lam = cholesky(covar)
             # aplha * sum(V_j * R_ij) + LAMBDA_U * mu_u
             temp = (self.beta * np.dot(features.T, rating) +
-                    np.dot(self.alpha_user, self.mu_user))
+                    np.dot(self.alpha_user, self.mu_user)) # eq. 13
             # mu_i_star
             mean = np.dot(covar, temp)
-
-            temp_feature = pyro.sample('u_temp_feature' + str(user_id), dist.Normal(mean, lam))
+            temp_feature = mean + np.dot(
+                lam, self.rand_state.randn(self.n_feature, 1))
             self.user_features_[user_id, :] = temp_feature.ravel()
-
-          
-        def _model(self, sigma):
-            i_mu_mean, i_mu_var = self._update_item_params()
-            u_mu_mean, u_mu_var = self._update_user_params()
-            self.mu_item = pyro.sample('mu_item', dist.Normal(i_mu_mean, i_mu_var))
-            self.mu_user = pyro.sample('mu_user', dist.Normal(u_mu_mean, u_mu_var))
-
-            self._update_item_features()
-            self._update_user_features()            
-    
-            return pyro.sample("obs", dist.Normal(np.matmul(self.user_features_, self.item_features_.transpose()) 
-                               + self.mean_rating_ * np.ones(self.n_user, self.n_item), sigma))
-
-        def _conditioned_model(self, model, sigma, y):
-            return poutine.condtion(model, data={"obs": y})(sigma)
- 
-        def _main(self, args):
-            nuts_kernel = NUTS(_conditioned_model, jit_compile=args.jit,)
-            posterior = MCMC(nuts_kernel,
-                             num_samples=args.num_samples,
-                             warmup_steps=args.warmup_steps,
-                             num_chains=args.num_chains).run(_model)
-            marginal = posterior.marginal(sites=['mu_item', 'mu_user'] + 
-                                                ['u_temp_feature' + str(user_id) for user_id in xrange(self.n_user)] +
-                                                ['i_temp_feature' + str(item_id) for item_id in xrange(self.n_item)])
-            marginal = torch.cat(list(marginal.support(flatten=True).values()), dim=-1).cpu().numpy()
-            
-
-bpmf = BPMF()
-parser = argparse.ArgumentParser(description='Eight Schools MCMC')
-parser.add_argument('--num-samples', type=int, default=1000,
-                        help='number of MCMC samples (default: 1000)')
-parser.add_argument('--num-chains', type=int, default=1,
-                        help='number of parallel MCMC chains (default: 1)')
-parser.add_argument('--warmup-steps', type=int, default=1000,
-                        help='number of MCMC samples for warmup (default: 1000)')
-parser.add_argument('--jit', action='store_true', default=False)
-args = parser.parse_args()
-bpmf._main(args)
-   
-           
-        
-         
-
-
