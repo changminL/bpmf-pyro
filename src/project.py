@@ -22,6 +22,10 @@ from utils.validation import check_ratings
 from utils.evaluation import RMSE
 from utils.datasets import load_movielens_1m_ratings
 from utils.progress import printProgressBar
+from torch.distributions.multivariate_normal import MultivariateNormal
+from torch.autograd import Variable
+
+import pdb
 
 logging.basicConfig(format='%(message)s', level=logging.INFO)
 pyro.enable_validation(True)
@@ -120,9 +124,13 @@ class BPMF():
         # update mu_item
         mu_mean = (self.beta_item * self.mu0_item + N * X_bar) / \
             (self.beta_item + N)
-        mu_mean = [i[0] for i in mu_mean]
-        mu_var = cholesky(inv(np.dot(self.beta_item + N
-                        , self.alpha_item)))[self.n_feature-1]
+
+        #mu_mean = [i[0] for i in mu_mean]
+        #mu_var = cholesky(inv(np.dot(self.beta_item + N
+        #                , self.alpha_item)))[self.n_feature-1]
+        #----------------------------------------------------------------------
+        mu_var = cholesky(inv(np.dot(self.beta_item + N, self.alpha_item)))
+        #----------------------------------------------------------------------
         return mu_mean, mu_var
 
     def _update_user_params(self):
@@ -146,11 +154,14 @@ class BPMF():
         # update mu_user
         # mu_{0}_star = (beta_{0} * mu_{0} + N * U_bar) / (beta_{0} + N) 
         mu_mean = (self.beta_user * self.mu0_user + N * X_bar) / (self.beta_user + N)
-        mu_mean = [i[0] for i in mu_mean]
+        
+        #-------------------------------------------------------------------------
+        #mu_mean = [i[0] for i in mu_mean]
         # decomposed inv(beta_{0}_star * LAMBDA_{U}) 
-        mu_var = cholesky(inv(np.dot(self.beta_user + N
-                        , self.alpha_user)))[self.n_feature - 1]
-
+        #mu_var = cholesky(inv(np.dot(self.beta_user + N
+        #                , self.alpha_user)))[self.n_feature - 1]
+        mu_var = cholesky(inv(np.dot(self.beta_user + N, self.alpha_user)))
+        #---------------------------------------------------------------------------
         return mu_mean, mu_var
 
     def _update_item_features(self):
@@ -173,13 +184,27 @@ class BPMF():
                     np.dot(self.alpha_item, self.mu_item))
 
             mean = np.dot(covar, temp)
-
+            """
             for i in range(self.n_feature):
                 if lam[self.n_feature-1][i] <= 0.001:
                     lam[self.n_feature-1][i] = 0.001
                 temp_feature = pyro.sample('i_temp_feature'+str(item_id)+","+str(i)
                     , dist.Normal(mean[i][0], lam[self.n_feature-1][i]))
                 self.item_features_[item_id, i] = temp_feature
+            """
+            """
+            for i in range(lam.shape[0]):
+                for j in range(lam.shape[1]):
+                    if lam[i][j] <= 1e-6:
+                        lam[i][j] = 1e-6
+            """
+            #-----------------------------------------------------------------------------------------------
+            mean = Variable(torch.from_numpy(mean))
+            covar = Variable(torch.from_numpy(covar))
+            mean = torch.reshape(mean, (-1,))
+            temp_feature = pyro.sample('i_temp_feature' + str(item_id), dist.MultivariateNormal(mean, covar))  
+            self.item_features_[item_id, :] = temp_feature.numpy().ravel()
+            #-----------------------------------------------------------------------------------------------
 
     def _update_user_features(self):
         # Gibbs sampling for user features
@@ -200,14 +225,27 @@ class BPMF():
                     np.dot(self.alpha_user, self.mu_user))
             # mu_i_star
             mean = np.dot(covar, temp)
-
+            """
             for i in range(self.n_feature):
                 if lam[self.n_feature-1][i] <= 0.001:
                     lam[self.n_feature-1][i] = 0.001
                 temp_feature = pyro.sample('u_temp_feature'+str(user_id)+","+str(i)
                     , dist.Normal(mean[i][0], lam[self.n_feature-1][i]))
                 self.user_features_[user_id, i] = temp_feature
-
+            """
+            """
+            for i in range(lam.shape[0]):
+                for j in range(lam.shape[1]):
+                    if lam[i][j] <= 1e-6:
+                        lam[i][j] = 1e-6
+            """
+            #-----------------------------------------------------------------------------------------------
+            mean = Variable(torch.from_numpy(mean))
+            mean = torch.reshape(mean, (-1,))
+            covar = Variable(torch.from_numpy(covar))
+            temp_feature = pyro.sample('u_temp_feature' + str(user_id), dist.MultivariateNormal(mean, covar))
+            self.user_features_[user_id, :] = temp_feature.numpy().ravel()
+            #-----------------------------------------------------------------------------------------------
           
     def _model(self, sigma):
         self.iter_ += 1
@@ -215,6 +253,7 @@ class BPMF():
         print("updating parameters")
         i_mu_mean, i_mu_var = self._update_item_params()
         u_mu_mean, u_mu_var = self._update_user_params()
+        """
         for i in range(self.n_feature):
             if i_mu_var[i] <= 0.001:
                 i_mu_var[i] = 0.001
@@ -224,6 +263,29 @@ class BPMF():
                                           , dist.Normal(i_mu_mean[i], i_mu_var[i]))
             self.mu_user[i] = pyro.sample('mu_user' + str(i)
                                           , dist.Normal(u_mu_mean[i], u_mu_var[i]))
+        """
+        for i in range(i_mu_var.shape[0]):
+            for j in range(i_mu_var.shape[1]):
+                if i_mu_var[i][j] <= 1e-6:
+                    i_mu_var[i][j] = 1e-6
+        for i in range(u_mu_var.shape[0]):
+            for j in range(u_mu_var.shape[1]):
+                if u_mu_var[i][j] <= 1e-6:
+                    u_mu_var[i][j] = 1e-6
+        #----------------------------------------------------------------------------------------------
+        i_mu_mean = Variable(torch.from_numpy(i_mu_mean))
+        i_mu_var = Variable(torch.from_numpy(i_mu_var))
+        u_mu_mean = Variable(torch.from_numpy(u_mu_mean))
+        u_mu_var = Variable(torch.from_numpy(u_mu_var))
+
+        i_mu_mean = torch.reshape(i_mu_mean, (-1,))
+        u_mu_mean = torch.reshape(u_mu_mean, (-1,))
+        self.mu_item = pyro.sample('mu_item', dist.MultivariateNormal(i_mu_mean, covariance_matrix=i_mu_var))
+        self.mu_item = torch.reshape(self.mu_item, (self.n_feature,1))
+        self.mu_user = pyro.sample('mu_user', dist.MultivariateNormal(u_mu_mean, covariance_matrix=u_mu_var))
+        self.mu_user = torch.reshape(self.mu_user, (self.n_feature,1))
+        #-----------------------------------------------------------------------------------------------
+
         print("updating item features")
         self._update_item_features()
         print("Done")

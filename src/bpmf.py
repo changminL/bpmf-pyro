@@ -13,14 +13,14 @@ from numpy.linalg import inv, cholesky
 from numpy.random import RandomState
 from scipy.stats import wishart
 
-from .base import ModelBase
-from .exceptions import NotFittedError
-from .utils.datasets import build_user_item_matrix
-from .utils.validation import check_ratings
-from .utils.evaluation import RMSE
+from base import ModelBase
+from exceptions import NotFittedError
+from utils.datasets import build_user_item_matrix
+from utils.validation import check_ratings
+from utils.evaluation import RMSE
 
 logger = logging.getLogger(__name__)
-
+import pdb
 
 class BPMF(ModelBase):
     """Bayesian Probabilistic Matrix Factorization
@@ -210,6 +210,7 @@ class BPMF(ModelBase):
     def _udpate_item_features(self):
         # Gibbs sampling for item features
         for item_id in xrange(self.n_item):
+            pdb.set_trace()
             indices = self.ratings_csc_[:, item_id].indices
             features = self.user_features_[indices, :]
             rating = self.ratings_csc_[:, item_id].data - self.mean_rating_
@@ -223,6 +224,7 @@ class BPMF(ModelBase):
                     np.dot(self.alpha_item, self.mu_item))  # eq.13 
 
             mean = np.dot(covar, temp)
+    
             temp_feature = mean + np.dot(
                 lam, self.rand_state.randn(self.n_feature, 1))
             self.item_features_[item_id, :] = temp_feature.ravel()
