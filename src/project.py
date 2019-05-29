@@ -101,9 +101,9 @@ class BPMF():
     def _update_item_params(self):
         N = self.n_item
         X_bar = np.mean(self.item_features_, 0).reshape((self.n_feature, 1))
-        # print 'X_bar', X_bar.shape
+        # #print 'X_bar', X_bar.shape
         S_bar = np.cov(self.item_features_.T)
-        # print 'S_bar', S_bar.shape
+        # #print 'S_bar', S_bar.shape
 
         diff_X_bar = self.mu0_item - X_bar
 
@@ -129,7 +129,7 @@ class BPMF():
         #mu_var = cholesky(inv(np.dot(self.beta_item + N
         #                , self.alpha_item)))[self.n_feature-1]
         #----------------------------------------------------------------------
-        mu_var = cholesky(inv(np.dot(self.beta_item + N, self.alpha_item)))
+        mu_var = inv(np.dot(self.beta_item + N, self.alpha_item))
         #----------------------------------------------------------------------
         return mu_mean, mu_var
 
@@ -160,17 +160,15 @@ class BPMF():
         # decomposed inv(beta_{0}_star * LAMBDA_{U}) 
         #mu_var = cholesky(inv(np.dot(self.beta_user + N
         #                , self.alpha_user)))[self.n_feature - 1]
-        mu_var = cholesky(inv(np.dot(self.beta_user + N, self.alpha_user)))
+        mu_var = inv(np.dot(self.beta_user + N, self.alpha_user))
         #---------------------------------------------------------------------------
         return mu_mean, mu_var
 
     def _update_item_features(self):
         # Gibbs sampling for item features
-        printProgressBar(0, self.n_item, prefix = 'Updating item features:'
-                , suffix = 'Complete', length = 40)
+        #printProgressBar(0, self.n_item, prefix = 'Updating item features:', suffix = 'Complete', length = 40)
         for item_id in xrange(self.n_item):
-            printProgressBar(item_id, self.n_item, prefix = 'Updating item features:'
-                , suffix = 'Complete', length = 40)
+            #printProgressBar(item_id, self.n_item, prefix = 'Updating item features:', suffix = 'Complete', length = 40)
             indices = self.ratings_csc_[:, item_id].indices
             features = self.user_features_[indices, :]
             rating = self.ratings_csc_[:, item_id].data - self.mean_rating_
@@ -184,35 +182,19 @@ class BPMF():
                     np.dot(self.alpha_item, self.mu_item))
 
             mean = np.dot(covar, temp)
-            """
-            for i in range(self.n_feature):
-                if lam[self.n_feature-1][i] <= 0.001:
-                    lam[self.n_feature-1][i] = 0.001
-                temp_feature = pyro.sample('i_temp_feature'+str(item_id)+","+str(i)
-                    , dist.Normal(mean[i][0], lam[self.n_feature-1][i]))
-                self.item_features_[item_id, i] = temp_feature
-            """
-            """
-            for i in range(lam.shape[0]):
-                for j in range(lam.shape[1]):
-                    if lam[i][j] <= 1e-6:
-                        lam[i][j] = 1e-6
-            """
             #-----------------------------------------------------------------------------------------------
             mean = Variable(torch.from_numpy(mean))
             covar = Variable(torch.from_numpy(covar))
             mean = torch.reshape(mean, (-1,))
-            temp_feature = pyro.sample('i_temp_feature' + str(item_id), dist.MultivariateNormal(mean, covar))  
-            self.item_features_[item_id, :] = temp_feature.numpy().ravel()
+            temp_feature = pyro.sample('i_temp_feature' + str(item_id), dist.MultivariateNormal(mean, covariance_matrix=covar))  
+            self.item_features_[item_id, :] = temp_feature.detach().numpy().ravel()
             #-----------------------------------------------------------------------------------------------
 
     def _update_user_features(self):
         # Gibbs sampling for user features
-        printProgressBar(0, self.n_user, prefix = 'Updating user features:'
-                , suffix = 'Complete', length = 40)
+        #printProgressBar(0, self.n_user, prefix = 'Updating user features:', suffix = 'Complete', length = 40)
         for user_id in xrange(self.n_user):
-            printProgressBar(user_id, self.n_user, prefix = 'Updating user features:'
-                , suffix = 'Complete', length = 40)
+            #printProgressBar(user_id, self.n_user, prefix = 'Updating user features:' suffix = 'Complete', length = 40)
             indices = self.ratings_csr_[user_id, :].indices
             features = self.item_features_[indices, :]
             rating = self.ratings_csr_[user_id, :].data - self.mean_rating_
@@ -225,45 +207,20 @@ class BPMF():
                     np.dot(self.alpha_user, self.mu_user))
             # mu_i_star
             mean = np.dot(covar, temp)
-            """
-            for i in range(self.n_feature):
-                if lam[self.n_feature-1][i] <= 0.001:
-                    lam[self.n_feature-1][i] = 0.001
-                temp_feature = pyro.sample('u_temp_feature'+str(user_id)+","+str(i)
-                    , dist.Normal(mean[i][0], lam[self.n_feature-1][i]))
-                self.user_features_[user_id, i] = temp_feature
-            """
-            """
-            for i in range(lam.shape[0]):
-                for j in range(lam.shape[1]):
-                    if lam[i][j] <= 1e-6:
-                        lam[i][j] = 1e-6
-            """
             #-----------------------------------------------------------------------------------------------
             mean = Variable(torch.from_numpy(mean))
             mean = torch.reshape(mean, (-1,))
             covar = Variable(torch.from_numpy(covar))
-            temp_feature = pyro.sample('u_temp_feature' + str(user_id), dist.MultivariateNormal(mean, covar))
-            self.user_features_[user_id, :] = temp_feature.numpy().ravel()
+            temp_feature = pyro.sample('u_temp_feature' + str(user_id), dist.MultivariateNormal(mean, covariance_matrix=covar))
+            self.user_features_[user_id, :] = temp_feature.detach().numpy().ravel()
             #-----------------------------------------------------------------------------------------------
           
     def _model(self, sigma):
         self.iter_ += 1
-        print("iteration : " + str(self.iter_))
-        print("updating parameters")
+        #print("iteration : " + str(self.iter_))
+        #print("updating parameters")
         i_mu_mean, i_mu_var = self._update_item_params()
         u_mu_mean, u_mu_var = self._update_user_params()
-        """
-        for i in range(self.n_feature):
-            if i_mu_var[i] <= 0.001:
-                i_mu_var[i] = 0.001
-            if u_mu_var[i] <= 0.001:
-                u_mu_var[i] = 0.001
-            self.mu_item[i] = pyro.sample('mu_item' + str(i)
-                                          , dist.Normal(i_mu_mean[i], i_mu_var[i]))
-            self.mu_user[i] = pyro.sample('mu_user' + str(i)
-                                          , dist.Normal(u_mu_mean[i], u_mu_var[i]))
-        """
         for i in range(i_mu_var.shape[0]):
             for j in range(i_mu_var.shape[1]):
                 if i_mu_var[i][j] <= 1e-6:
@@ -280,52 +237,102 @@ class BPMF():
 
         i_mu_mean = torch.reshape(i_mu_mean, (-1,))
         u_mu_mean = torch.reshape(u_mu_mean, (-1,))
-        self.mu_item = pyro.sample('mu_item', dist.MultivariateNormal(i_mu_mean, covariance_matrix=i_mu_var))
-        self.mu_item = torch.reshape(self.mu_item, (self.n_feature,1))
-        self.mu_user = pyro.sample('mu_user', dist.MultivariateNormal(u_mu_mean, covariance_matrix=u_mu_var))
-        self.mu_user = torch.reshape(self.mu_user, (self.n_feature,1))
+        while True:
+            try:
+                self.mu_item = pyro.sample('mu_item', dist.MultivariateNormal(i_mu_mean, covariance_matrix=i_mu_var))
+                break
+            except (RuntimeError, ValueError):
+                i_mu_var = 0.01 * torch.eye(self.n_feature, dtype=torch.float64)
+
+        self.mu_item = torch.reshape(self.mu_item, (self.n_feature,1)).detach().numpy()
+        while True:
+            try:
+                self.mu_user = pyro.sample('mu_user', dist.MultivariateNormal(u_mu_mean, covariance_matrix=u_mu_var))
+                break
+            except (RuntimeError, ValueError):
+                u_mu_var = 0.01 * torch.eye(self.n_feature,dtype=torch.float64)
+        self.mu_user = torch.reshape(self.mu_user, (self.n_feature,1)).detach().numpy()
         #-----------------------------------------------------------------------------------------------
 
-        print("updating item features")
+        #print("updating item features")
         self._update_item_features()
-        print("Done")
-        print("updating user_features")
+        #print("Done")
+        #print("updating user_features")
         self._update_user_features()
-        print("Done")
-        return pyro.sample("obs"
-                ,dist.Normal(np.matmul(self.user_features_
-                        ,self.item_features_.transpose())
-                 + self.mean_rating_ * np.ones(self.n_user, self.n_item), sigma))
+        #print("Done")
 
-    def _conditioned_model(self,model, sigma, y):
-        return poutine.condition(model, data={"obs": y})(sigma)
+        Y = np.add(np.matmul(self.user_features_
+                      ,self.item_features_.transpose())
+           ,self.mean_rating_ * np.ones((self.n_user, self.n_item), dtype='float64'))
+
+        for x in range(self.n_user):
+            for y in range(self.n_item):
+                if Y[x,y] > self.max_rating:
+                    Y[x,y] = self.max_rating
+                elif Y[x,y] < self.min_rating:
+                    Y[x,y] = self.min_rating
+        
+        Y = torch.autograd.Variable(torch.from_numpy(Y))
+        Y2 = Y
+        for x in range(self.n_user):
+            for y in range(self.n_item):
+                Y2[x,y] = pyro.sample("obs" + str(x*self.n_item + y),dist.Normal(Y[x,y], 0.5))
+        return Y2 
+
+    def _conditioned_model(self,model, sigma, ratings):
+        data = dict()
+        for x in range(self.n_user):
+            for y in range(self.n_item):
+                if ratings[x,y] != 0:
+                    data["obs" + str(x * self.n_item + y)] = torch.tensor(ratings[x,y], dtype = torch.float64)
+        ratings = torch.autograd.Variable(torch.from_numpy(ratings))
+        return poutine.condition(model, data=data)(sigma)
  
-    def _main(self, ratings, jit=False, num_samples=500
-                  , warmup_steps=100, num_chains=1, sigma=1):
+    #1000, 1000, 1 for defulat
+    def _main(self, ratings,sigma, jit=False, num_samples=10
+                  , warmup_steps=4, num_chains=1):
+        ratingstmp = np.zeros((self.n_user, self.n_item), dtype = 'float64')
+        for rat in ratings:
+            ratingstmp[rat[0],rat[1]] = rat[2]
         nuts_kernel = NUTS(self._conditioned_model, jit_compile=jit,)
         posterior = MCMC(nuts_kernel,
                          num_samples=num_samples,
                          warmup_steps=warmup_steps,
                          num_chains=num_chains,
-                         disable_progbar=True).run(self._model,sigma, ratings)
-        marginal = posterior.marginal(sites=['mu_item', 'mu_user'] + 
-            ['u_temp_feature' + str(user_id) for user_id in xrange(self.n_user)] +
-            ['i_temp_feature' + str(item_id) for item_id in xrange(self.n_item)])
-        marginal = torch.cat(list(marginal.support(flatten=True).values())
-                             ,dim=-1).cpu().numpy()
-        if self.output_file is not None:
-            self.output_file.write(marginal)
+                         disable_progbar=False).run(self._model,sigma, ratingstmp)
+        sites = ['mu_item', 'mu_user'] + ['u_temp_feature' + str(user_id) for user_id in xrange(self.n_user)] + ['i_temp_feature' + str(item_id) for item_id in xrange(self.n_item)]
+        marginal = posterior.marginal(sites=sites)
+
+        Y = np.add(np.matmul(self.user_features_
+                      ,self.item_features_.transpose())
+           ,self.mean_rating_ * np.ones((self.n_user, self.n_item), dtype='float64'))
+        print("user_feature : ")
+        print(self.user_features_)
+        print("item_features : ")
+        print(self.item_features_)
+        print("computed data : ")
+        print(Y)
+        print("truth data : ")
+        print(ratingstmp)
+        for x in range(self.n_user):
+            for y in range(self.n_item):
+                if ratingstmp[x,y] == 0.:
+                    Y[x,y] = 0.
+        print("0 removed computed data : ")
+        print(Y)
+        print("RMSE: " + str(RMSE(Y, ratingstmp)))
 
             
 if __name__ == "__main__":
-    print("Loading data....")
-    ratings = load_movielens_1m_ratings('../ml-1m/ratings.dat')
-    print("Loaded")
+    #print("Loading data....")
+    ratings = load_movielens_1m_ratings('../ml-1m/ratings-made.dat')
+    #print("Loaded")
 
     output_file = open("mcmc_result.txt", 'w')
     n_user = max(ratings[:,0])
     n_item = max(ratings[:,1])
     ratings[:,(0,1)] -= 1
     bpmf = BPMF(n_user=n_user,n_item=n_item, n_feature=10,
-                max_rating=5., min_rating=1., seed= 0,output_file = output_file)
-    bpmf._main(ratings)
+                max_rating=5., min_rating=1., seed= 0, output_file = output_file)
+    sigma = 0.1 * torch.eye(int(n_user * n_item), dtype = torch.float64)
+    bpmf._main(ratings, sigma)
