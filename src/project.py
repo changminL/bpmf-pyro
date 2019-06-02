@@ -128,12 +128,7 @@ class BPMF():
         mu_mean = (self.beta_item * self.mu0_item + N * X_bar) / \
             (self.beta_item + N)
 
-        #mu_mean = [i[0] for i in mu_mean]
-        #mu_var = cholesky(inv(np.dot(self.beta_item + N
-        #                , self.alpha_item)))[self.n_feature-1]
-        #----------------------------------------------------------------------
         mu_var = inv(np.dot(self.beta_item + N, self.alpha_item))
-        #----------------------------------------------------------------------
         return mu_mean, mu_var
 
     def _update_user_params(self):
@@ -195,9 +190,7 @@ class BPMF():
 
     def _update_user_features(self):
         # Gibbs sampling for user features
-        #printProgressBar(0, self.n_user, prefix = 'Updating user features:', suffix = 'Complete', length = 40)
         for user_id in xrange(self.n_user):
-            #printProgressBar(user_id, self.n_user, prefix = 'Updating user features:', suffix = 'Complete', length = 40)
             indices = self.ratings_csr_[user_id, :].indices
             features = self.item_features_[indices, :]
             rating = self.ratings_csr_[user_id, :].data - self.mean_rating_
@@ -210,13 +203,11 @@ class BPMF():
                     np.dot(self.alpha_user, self.mu_user))
             # mu_i_star
             mean = np.dot(covar, temp)
-            #-----------------------------------------------------------------------------------------------
             mean = Variable(torch.from_numpy(mean))
             mean = torch.reshape(mean, (-1,))
             covar = Variable(torch.from_numpy(covar))
             temp_feature = pyro.sample('u_temp_feature' + str(user_id), dist.MultivariateNormal(mean, covariance_matrix=covar))
             self.user_features_[user_id, :] = temp_feature.detach().numpy().ravel()
-            #-----------------------------------------------------------------------------------------------
 
     def _predict(self, data, is_train=False, avg_u_f=None, avg_i_f=None):
         if not self.mean_rating_:
@@ -262,7 +253,7 @@ class BPMF():
             for j in range(u_mu_var.shape[1]):
                 if u_mu_var[i][j] <= 1e-6:
                     u_mu_var[i][j] = 1e-6
-        #----------------------------------------------------------------------------------------------
+
         i_mu_mean = Variable(torch.from_numpy(i_mu_mean))
         i_mu_var = Variable(torch.from_numpy(i_mu_var))
         u_mu_mean = Variable(torch.from_numpy(u_mu_mean))
@@ -275,7 +266,7 @@ class BPMF():
                 self.mu_item = pyro.sample('mu_item', dist.MultivariateNormal(i_mu_mean, covariance_matrix=i_mu_var))
                 break
             except (RuntimeError, ValueError):
-                i_mu_var = 0.01 * torch.eye(self.n_feature, dtype=torch.float64)
+                i_mu_var = 0.1 * torch.eye(self.n_feature, dtype=torch.float64)
 
         self.mu_item = torch.reshape(self.mu_item, (self.n_feature,1)).detach().numpy()
         while True:
@@ -283,7 +274,7 @@ class BPMF():
                 self.mu_user = pyro.sample('mu_user', dist.MultivariateNormal(u_mu_mean, covariance_matrix=u_mu_var))
                 break
             except (RuntimeError, ValueError):
-                u_mu_var = 0.01 * torch.eye(self.n_feature,dtype=torch.float64)
+                u_mu_var = 0.1 * torch.eye(self.n_feature,dtype=torch.float64)
                 
         self.mu_user = torch.reshape(self.mu_user, (self.n_feature,1)).detach().numpy()
         #-----------------------------------------------------------------------------------------------
