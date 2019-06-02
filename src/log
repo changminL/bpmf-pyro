@@ -1,0 +1,1287 @@
+node : 
+{'name': '_INPUT', 'type': 'args', 'args': (), 'kwargs': {}}
+node : 
+{'type': 'sample', 'name': 'mu_item', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([0.2009, 0.1485, 0.0672, 0.1385, 0.1077, 0.0808, 0.1592, 0.1649, 0.1193,
+        0.1771], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'mu_user', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([0.1138, 0.1356, 0.0964, 0.2090, 0.0771, 0.1092, 0.0838, 0.1364, 0.1080,
+        0.0111], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature0', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 2.9307e-01,  4.2955e-01,  1.9796e-01,  2.9724e-01,  2.4623e-01,
+         3.3001e-01,  2.9190e-04, -6.2269e-02,  1.9226e-01, -2.0140e-02],
+       dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature1', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.4815,  0.0020,  0.2732,  0.2354, -0.2288,  0.1155, -0.0113,  0.2292,
+         0.2300,  0.0614], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature2', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.1908,  0.2002,  0.0525, -0.0110, -0.1179, -0.0018,  0.1867,  0.1558,
+         0.4036,  0.2879], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature3', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.2165,  0.0095,  0.2859,  0.5915,  0.1272, -0.0727, -0.1818, -0.0606,
+         0.3019, -0.0648], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature4', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.0283,  0.0745,  0.2788,  0.6580, -0.1881, -0.0009, -0.3193,  0.1956,
+         0.2950,  0.2463], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature5', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.3546, -0.1419, -0.0369,  0.2747,  0.2621,  0.1285,  0.1218,  0.3102,
+         0.0631,  0.1441], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature6', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.2337,  0.3409, -0.0370,  0.2316, -0.1196,  0.2115, -0.0383, -0.0254,
+        -0.0821,  0.1741], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature7', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.2417,  0.2435, -0.0445,  0.1106, -0.1003, -0.0099,  0.1386,  0.1682,
+        -0.1008, -0.0669], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature8', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.6142,  0.6783,  0.0156,  0.0131, -0.2234,  0.2134, -0.3148,  0.1674,
+         0.2611,  0.4128], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature9', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.1383, -0.0546, -0.0057,  0.0981, -0.0016,  0.0264, -0.2559,  0.0554,
+         0.0972, -0.0810], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature10', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.1005,  0.3471,  0.2219,  0.2530,  0.4416,  0.2172,  0.1523,  0.2678,
+         0.3251,  0.1215], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature11', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.1590,  0.0556, -0.2605,  0.2321, -0.0646,  0.1925,  0.0598,  0.4587,
+        -0.1392,  0.3029], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature12', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.4965,  0.4150, -0.0407, -0.0305,  0.5010,  0.2244,  0.2901,  0.2953,
+         0.2912,  0.0870], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature13', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.7095,  0.3964,  0.2274, -0.0656,  0.0889, -0.1308,  0.1296,  0.4581,
+         0.4655,  0.3041], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature14', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-4.5893e-02,  4.2722e-01, -4.3937e-02, -2.8369e-04,  2.9190e-01,
+        -8.5665e-02,  4.0821e-01,  1.0504e-01,  2.6629e-01,  2.7682e-01],
+       dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature15', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.3774,  0.2479, -0.2273, -0.0646, -0.1837,  0.0653, -0.0188,  0.4885,
+         0.0186,  0.3817], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature16', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([0.0823, 0.4443, 0.0307, 0.2582, 0.0566, 0.2913, 0.3714, 0.1471, 0.0299,
+        0.6344], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature17', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.1931, -0.0146, -0.0493,  0.1706, -0.3024, -0.0440, -0.0686, -0.4243,
+        -0.0630, -0.3094], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature18', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.0879,  0.1010, -0.1666, -0.1084, -0.3300, -0.0337, -0.1586,  0.1686,
+         0.1097,  0.2033], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature19', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.2385,  0.2753,  0.1910,  0.1381,  0.1441,  0.1767,  0.0707,  0.2625,
+         0.5761, -0.1513], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature20', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([0.2915, 0.2594, 0.1107, 0.3169, 0.2257, 0.2487, 0.4943, 0.2270, 0.2373,
+        0.5747], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature21', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.6464,  0.3716,  0.1238,  0.3839,  0.5876, -0.0598,  0.3216,  0.4357,
+         0.0443,  0.1036], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature22', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.3747,  0.4301, -0.0973,  0.0626,  0.2591,  0.1724,  0.4883,  0.2230,
+         0.0083,  0.1610], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature23', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.1942,  0.1646, -0.0379,  0.2251,  0.2468, -0.2107,  0.1819,  0.1134,
+         0.1739,  0.2064], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature24', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.2523,  0.3385, -0.1074, -0.0466,  0.8543,  0.1183,  0.9604,  0.2278,
+         0.4299,  0.2714], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature25', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.2882,  0.1196, -0.0354,  0.0948, -0.0454,  0.0463,  0.5214,  0.1796,
+         0.1373,  0.4949], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature26', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.4798,  0.3484,  0.0427,  0.2070,  0.3712,  0.2409,  0.3900, -0.0732,
+        -0.0018, -0.0663], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'i_temp_feature27', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.2263, -0.0180, -0.0215, -0.1685,  0.1599,  0.1980, -0.3565,  0.2198,
+        -0.1017,  0.0312], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature0', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.0319, -0.0216,  0.1140,  0.3474,  0.5805,  0.3782, -0.1807,  0.2850,
+         0.3367,  0.1624], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature1', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.5051,  0.6680,  0.1718, -0.1463, -0.4941,  0.1061,  0.1120,  0.6701,
+        -0.1931,  0.4328], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature2', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.0353, -0.0344, -0.1685,  0.5338,  0.4239,  0.1073, -0.2410,  0.3231,
+        -0.0478, -0.0620], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature3', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 1.0578,  0.4483, -0.3148,  0.2727, -0.2248, -0.1062,  0.0426,  0.9888,
+         0.3593,  0.6008], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature4', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.0805,  0.0560,  0.2459, -0.0453,  0.3788,  0.2587, -0.3499, -0.0294,
+         0.2729, -0.3198], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature5', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.3127,  0.3546, -0.2444,  0.3314,  0.3909,  0.3830, -0.7059,  0.2278,
+         0.2806,  0.6958], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature6', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.1234,  0.3417, -0.0094, -0.1721, -0.2153,  0.0743,  0.1109,  0.2771,
+         0.0431,  0.0716], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature7', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.1908,  0.0399,  0.3511, -0.1131, -0.5945, -0.3138,  0.5191,  0.1682,
+         0.1297,  0.0827], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature8', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.0903, -0.0659,  0.0260,  0.3322,  0.4715,  0.1895,  0.0912,  0.2824,
+         0.8646,  0.2082], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature9', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.1481,  0.1490,  0.2482, -0.2427,  0.2439,  0.9069,  0.0161, -0.1741,
+        -0.2525, -0.1030], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature10', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.1463,  0.0077,  0.7714,  0.0460, -0.2261, -0.1063,  0.6778,  0.2717,
+        -0.1344, -0.1217], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature11', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.2777,  0.1499, -0.5119,  0.7083,  0.6819,  0.2385, -0.3858,  0.4306,
+        -0.1927,  0.0557], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature12', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.0810,  0.2788,  0.0757, -0.1828,  0.0177,  0.2194, -0.3237,  0.5472,
+         0.5590,  0.5092], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature13', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.3736,  0.1689,  0.5681,  0.0490, -0.3392, -0.0062,  0.9761, -0.1672,
+         0.2612, -0.1235], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature14', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.0193,  0.1649,  0.0273,  0.3932, -0.2209,  0.1318,  0.5572,  0.1734,
+        -0.2203, -0.1925], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature15', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([-0.1101,  0.3244,  0.3275, -0.3208, -0.1688,  0.0185, -0.3675, -0.1914,
+        -0.3884, -0.0585], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature16', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.3739,  0.0748, -0.2414,  0.1121,  0.5691,  0.3879, -0.0187,  0.4602,
+        -0.0516, -0.3682], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'u_temp_feature17', 'fn': MultivariateNormal(loc: torch.Size([10]), covariance_matrix: torch.Size([10, 10])), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor([ 0.2653, -0.0008, -0.0913,  0.2480, -0.2620, -0.1236,  0.3215, -0.1100,
+        -0.2801, -0.3317], dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs0', 'fn': Normal(loc: 3.870983955593303, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8710, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs1', 'fn': Normal(loc: 3.7191914924752245, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7192, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs2', 'fn': Normal(loc: 3.1931799594753127, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1932, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs3', 'fn': Normal(loc: 3.395012537806021, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3950, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs4', 'fn': Normal(loc: 3.6694581617388855, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6695, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs5', 'fn': Normal(loc: 3.146238515764802, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1462, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs6', 'fn': Normal(loc: 3.9038301854283044, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9038, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs7', 'fn': Normal(loc: 2.904298050137377, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9043, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs8', 'fn': Normal(loc: 3.280095767814701, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2801, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs9', 'fn': Normal(loc: 3.148161572530055, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1482, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs10', 'fn': Normal(loc: 4.178579118151586, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1786, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs11', 'fn': Normal(loc: 2.314410522875089, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3144, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs12', 'fn': Normal(loc: 2.0958593024821264, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.0959, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs13', 'fn': Normal(loc: 2.6693905387063035, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6694, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs14', 'fn': Normal(loc: 2.9596103650628827, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9596, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs15', 'fn': Normal(loc: 2.680736486940344, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6807, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs16', 'fn': Normal(loc: 3.3099782304686727, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3100, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs17', 'fn': Normal(loc: 1.9019193247715325, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.9019, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs18', 'fn': Normal(loc: 2.881059774873158, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8811, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs19', 'fn': Normal(loc: 3.3531139213846193, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3531, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs20', 'fn': Normal(loc: 2.751691888485697, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7517, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs21', 'fn': Normal(loc: 2.386248450011623, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3862, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs22', 'fn': Normal(loc: 3.434065622774426, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4341, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs23', 'fn': Normal(loc: 3.489143146443142, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4891, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs24', 'fn': Normal(loc: 4.320915017777996, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.3209, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs25', 'fn': Normal(loc: 3.2014374158681846, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2014, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs26', 'fn': Normal(loc: 4.040485866721248, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0405, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs27', 'fn': Normal(loc: 3.33885796887927, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3389, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs28', 'fn': Normal(loc: 2.5148012048566493, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5148, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs29', 'fn': Normal(loc: 3.706504795228649, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7065, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs30', 'fn': Normal(loc: 3.339335744243979, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3393, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs31', 'fn': Normal(loc: 3.602419753226634, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6024, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs32', 'fn': Normal(loc: 3.079510264049992, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0795, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs33', 'fn': Normal(loc: 2.438401942649719, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4384, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs34', 'fn': Normal(loc: 3.272124207951649, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2721, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs35', 'fn': Normal(loc: 2.9509229353194333, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9509, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs36', 'fn': Normal(loc: 3.740575204250642, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7406, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs37', 'fn': Normal(loc: 2.158825086412095, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.1588, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs38', 'fn': Normal(loc: 3.8758628414836434, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8759, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs39', 'fn': Normal(loc: 3.3082226764040015, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3082, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs40', 'fn': Normal(loc: 2.254238584466905, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.2542, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs41', 'fn': Normal(loc: 4.363332268459073, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.3633, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs42', 'fn': Normal(loc: 4.041509347003664, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0415, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs43', 'fn': Normal(loc: 3.5069361260714538, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5069, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs44', 'fn': Normal(loc: 3.945395129965927, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9454, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs45', 'fn': Normal(loc: 2.890090930172213, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8901, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs46', 'fn': Normal(loc: 2.8634600926310463, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8635, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs47', 'fn': Normal(loc: 3.127805408382282, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1278, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs48', 'fn': Normal(loc: 3.514169780272139, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5142, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs49', 'fn': Normal(loc: 4.07659718965188, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0766, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs50', 'fn': Normal(loc: 3.8130963372159217, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8131, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs51', 'fn': Normal(loc: 2.462096153376227, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4621, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs52', 'fn': Normal(loc: 2.9332106067531765, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9332, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs53', 'fn': Normal(loc: 4.140058261256928, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1401, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs54', 'fn': Normal(loc: 2.1046813510297158, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.1047, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs55', 'fn': Normal(loc: 2.6802975178323516, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6803, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs56', 'fn': Normal(loc: 4.310603342818565, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.3106, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs57', 'fn': Normal(loc: 2.923705866789691, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9237, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs58', 'fn': Normal(loc: 3.08355883071513, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0836, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs59', 'fn': Normal(loc: 3.663077147537211, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6631, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs60', 'fn': Normal(loc: 2.7939450657192215, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7939, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs61', 'fn': Normal(loc: 3.204164193999907, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2042, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs62', 'fn': Normal(loc: 2.423406794435761, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4234, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs63', 'fn': Normal(loc: 2.5578583311758614, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5579, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs64', 'fn': Normal(loc: 2.9937670574527284, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9938, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs65', 'fn': Normal(loc: 2.4979100838104245, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4979, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs66', 'fn': Normal(loc: 2.916222128147239, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9162, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs67', 'fn': Normal(loc: 3.589358239260814, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5894, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs68', 'fn': Normal(loc: 4.293146510642528, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.2931, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs69', 'fn': Normal(loc: 3.634101205167953, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6341, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs70', 'fn': Normal(loc: 2.8313035127837103, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8313, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs71', 'fn': Normal(loc: 2.8256828965416885, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8257, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs72', 'fn': Normal(loc: 2.8455285886859105, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8455, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs73', 'fn': Normal(loc: 3.8417141054405173, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8417, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs74', 'fn': Normal(loc: 2.940636340506595, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9406, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs75', 'fn': Normal(loc: 3.417574849503374, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4176, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs76', 'fn': Normal(loc: 2.760033528527585, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7600, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs77', 'fn': Normal(loc: 3.57204485281438, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5720, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs78', 'fn': Normal(loc: 2.5097582135986847, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5098, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs79', 'fn': Normal(loc: 3.1402083003702734, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1402, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs80', 'fn': Normal(loc: 2.876275910237876, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8763, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs81', 'fn': Normal(loc: 3.2743689982966737, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2744, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs82', 'fn': Normal(loc: 3.2153763066390284, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2154, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs83', 'fn': Normal(loc: 3.669816572619962, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6698, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs84', 'fn': Normal(loc: 2.2433213679246915, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.2433, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs85', 'fn': Normal(loc: 3.2971835118326505, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2972, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs86', 'fn': Normal(loc: 3.763288710561573, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7633, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs87', 'fn': Normal(loc: 2.1300855538244114, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.1301, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs88', 'fn': Normal(loc: 3.4609167818508033, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4609, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs89', 'fn': Normal(loc: 3.6293861196250154, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6294, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs90', 'fn': Normal(loc: 3.333841592901765, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3338, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs91', 'fn': Normal(loc: 2.1450592576497414, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.1451, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs92', 'fn': Normal(loc: 5.5832669378382995, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(5.5833, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs93', 'fn': Normal(loc: 2.6820448747428474, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6820, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs94', 'fn': Normal(loc: 3.940140025384136, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9401, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs95', 'fn': Normal(loc: 3.87972082547346, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8797, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs96', 'fn': Normal(loc: 3.8544459883042466, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8544, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs97', 'fn': Normal(loc: 4.422562736003404, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.4226, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs98', 'fn': Normal(loc: 3.578837600820222, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5788, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs99', 'fn': Normal(loc: 4.753368726768719, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.7534, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs100', 'fn': Normal(loc: 4.616492032318682, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.6165, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs101', 'fn': Normal(loc: 3.367215219507366, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3672, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs102', 'fn': Normal(loc: 3.1754018885941018, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1754, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs103', 'fn': Normal(loc: 3.072913654554845, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0729, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs104', 'fn': Normal(loc: 3.611501943828099, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6115, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs105', 'fn': Normal(loc: 4.899092003635612, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.8991, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs106', 'fn': Normal(loc: 4.474429208968971, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.4744, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs107', 'fn': Normal(loc: 4.256392692734986, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.2564, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs108', 'fn': Normal(loc: 3.9354127792068625, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9354, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs109', 'fn': Normal(loc: 4.0200784790433515, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0201, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs110', 'fn': Normal(loc: 3.428433562565271, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4284, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs111', 'fn': Normal(loc: 3.67508478895389, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6751, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs112', 'fn': Normal(loc: 2.899678126489541, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8997, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs113', 'fn': Normal(loc: 3.1271011647408224, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1271, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs114', 'fn': Normal(loc: 1.976860004420781, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.9769, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs115', 'fn': Normal(loc: 3.188339719249141, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1883, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs116', 'fn': Normal(loc: 3.168224097674216, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1682, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs117', 'fn': Normal(loc: 1.9490213531611529, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.9490, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs118', 'fn': Normal(loc: 2.8094993884130735, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8095, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs119', 'fn': Normal(loc: 2.7643744094715976, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7644, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs120', 'fn': Normal(loc: 2.762271901982673, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7623, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs121', 'fn': Normal(loc: 2.367817010670456, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3678, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs122', 'fn': Normal(loc: 2.9506714284643007, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9507, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs123', 'fn': Normal(loc: 3.205206598803084, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2052, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs124', 'fn': Normal(loc: 2.9509227671341165, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9509, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs125', 'fn': Normal(loc: 2.7139075462116136, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7139, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs126', 'fn': Normal(loc: 2.6752356186743858, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6752, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs127', 'fn': Normal(loc: 2.460287245028147, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4603, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs128', 'fn': Normal(loc: 2.6768405715810624, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6768, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs129', 'fn': Normal(loc: 2.3943380496932534, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3943, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs130', 'fn': Normal(loc: 3.1204039280330016, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1204, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs131', 'fn': Normal(loc: 3.2258769015429034, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2259, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs132', 'fn': Normal(loc: 2.4865102214384023, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4865, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs133', 'fn': Normal(loc: 2.8660043027925783, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8660, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs134', 'fn': Normal(loc: 2.8721806486068466, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8722, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs135', 'fn': Normal(loc: 3.3208482582829446, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3208, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs136', 'fn': Normal(loc: 1.6129196132591257, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.6129, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs137', 'fn': Normal(loc: 3.393176558821107, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3932, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs138', 'fn': Normal(loc: 2.5428835250155783, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5429, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs139', 'fn': Normal(loc: 2.8769767841515024, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8770, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs140', 'fn': Normal(loc: 3.3031278475979047, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3031, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs141', 'fn': Normal(loc: 2.801497202112722, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8015, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs142', 'fn': Normal(loc: 3.3173431067288464, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3173, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs143', 'fn': Normal(loc: 3.1067606330676822, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1068, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs144', 'fn': Normal(loc: 3.462731854334195, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4627, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs145', 'fn': Normal(loc: 3.805365691588597, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8054, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs146', 'fn': Normal(loc: 3.4689657669434277, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4690, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs147', 'fn': Normal(loc: 2.808634955321801, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8086, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs148', 'fn': Normal(loc: 4.496964524332708, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.4970, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs149', 'fn': Normal(loc: 3.5584502415070065, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5585, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs150', 'fn': Normal(loc: 3.4140567307104748, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4141, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs151', 'fn': Normal(loc: 4.001707544843289, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0017, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs152', 'fn': Normal(loc: 3.528602431330564, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5286, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs153', 'fn': Normal(loc: 3.770336163612973, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7703, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs154', 'fn': Normal(loc: 3.1394674783870733, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1395, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs155', 'fn': Normal(loc: 4.171149703201989, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1711, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs156', 'fn': Normal(loc: 3.577033606203433, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5770, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs157', 'fn': Normal(loc: 2.8633446709059793, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8633, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs158', 'fn': Normal(loc: 3.026213262465128, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0262, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs159', 'fn': Normal(loc: 2.74627688163474, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7463, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs160', 'fn': Normal(loc: 4.274196756700228, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.2742, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs161', 'fn': Normal(loc: 3.6442366369909562, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6442, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs162', 'fn': Normal(loc: 4.134319293550135, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1343, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs163', 'fn': Normal(loc: 3.619751842621636, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6198, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs164', 'fn': Normal(loc: 3.9787226491608387, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9787, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs165', 'fn': Normal(loc: 2.876447930934429, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8764, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs166', 'fn': Normal(loc: 3.226276449957481, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2263, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs167', 'fn': Normal(loc: 3.2893818177886294, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2894, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs168', 'fn': Normal(loc: 2.7719165784825157, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7719, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs169', 'fn': Normal(loc: 3.1430069223524724, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1430, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs170', 'fn': Normal(loc: 3.0603348001994544, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0603, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs171', 'fn': Normal(loc: 2.919380925809174, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9194, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs172', 'fn': Normal(loc: 2.919115256748239, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9191, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs173', 'fn': Normal(loc: 2.7246354784159776, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7246, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs174', 'fn': Normal(loc: 2.238704977887914, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.2387, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs175', 'fn': Normal(loc: 3.5952153846871724, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5952, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs176', 'fn': Normal(loc: 3.5978702212940017, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5979, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs177', 'fn': Normal(loc: 2.655786721118428, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6558, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs178', 'fn': Normal(loc: 4.298879830651318, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.2989, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs179', 'fn': Normal(loc: 3.6234860445549604, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6235, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs180', 'fn': Normal(loc: 3.2521746147680046, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2522, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs181', 'fn': Normal(loc: 2.8878024528104103, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8878, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs182', 'fn': Normal(loc: 3.1302511943043947, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1303, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs183', 'fn': Normal(loc: 3.9580030279811806, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9580, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs184', 'fn': Normal(loc: 4.1552558246372255, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1553, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs185', 'fn': Normal(loc: 2.667954538386849, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6680, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs186', 'fn': Normal(loc: 4.605719080679429, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.6057, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs187', 'fn': Normal(loc: 3.1153106647822875, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1153, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs188', 'fn': Normal(loc: 3.254400925450805, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2544, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs189', 'fn': Normal(loc: 3.012993307263494, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0130, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs190', 'fn': Normal(loc: 2.895925936963244, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8959, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs191', 'fn': Normal(loc: 3.089140152343477, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0891, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs192', 'fn': Normal(loc: 2.6740413336364064, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6740, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs193', 'fn': Normal(loc: 3.0457773215567574, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0458, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs194', 'fn': Normal(loc: 3.015826206095111, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0158, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs195', 'fn': Normal(loc: 3.3804215721100968, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3804, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs196', 'fn': Normal(loc: 2.2111596193574217, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.2112, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs197', 'fn': Normal(loc: 3.116878513085784, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1169, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs198', 'fn': Normal(loc: 3.307224956831478, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3072, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs199', 'fn': Normal(loc: 3.5507279182408524, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5507, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs200', 'fn': Normal(loc: 3.2218845400752936, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2219, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs201', 'fn': Normal(loc: 3.5195898960478047, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5196, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs202', 'fn': Normal(loc: 2.4423742025941433, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4424, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs203', 'fn': Normal(loc: 3.9855961437470673, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9856, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs204', 'fn': Normal(loc: 3.567775090130638, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5678, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs205', 'fn': Normal(loc: 2.2096666414283557, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.2097, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs206', 'fn': Normal(loc: 2.9442759729657575, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9443, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs207', 'fn': Normal(loc: 3.144681987463796, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1447, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs208', 'fn': Normal(loc: 2.6946656946909946, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6947, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs209', 'fn': Normal(loc: 4.026202433546068, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0262, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs210', 'fn': Normal(loc: 3.975791972304031, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9758, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs211', 'fn': Normal(loc: 2.9788279315565793, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9788, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs212', 'fn': Normal(loc: 2.113350059613202, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.1134, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs213', 'fn': Normal(loc: 2.914582379722315, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9146, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs214', 'fn': Normal(loc: 2.368394774924336, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3684, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs215', 'fn': Normal(loc: 2.9667296916230597, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9667, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs216', 'fn': Normal(loc: 3.172004622207885, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1720, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs217', 'fn': Normal(loc: 3.3555699598711493, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3556, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs218', 'fn': Normal(loc: 3.1729832010558097, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1730, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs219', 'fn': Normal(loc: 3.129516090750045, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1295, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs220', 'fn': Normal(loc: 2.8001459096188626, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8001, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs221', 'fn': Normal(loc: 3.841520619763208, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8415, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs222', 'fn': Normal(loc: 3.702879506706172, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7029, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs223', 'fn': Normal(loc: 2.397853941515155, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3979, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs224', 'fn': Normal(loc: 2.549232869937209, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5492, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs225', 'fn': Normal(loc: 3.6839463600842675, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6839, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs226', 'fn': Normal(loc: 3.560846032904865, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5608, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs227', 'fn': Normal(loc: 2.9061372815368847, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9061, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs228', 'fn': Normal(loc: 3.007289954886723, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0073, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs229', 'fn': Normal(loc: 3.963418059446964, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9634, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs230', 'fn': Normal(loc: 3.328246147236903, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3282, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs231', 'fn': Normal(loc: 3.001686852219413, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0017, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs232', 'fn': Normal(loc: 3.953763078871503, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9538, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs233', 'fn': Normal(loc: 3.2726181641013996, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2726, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs234', 'fn': Normal(loc: 4.4194874960735415, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.4195, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs235', 'fn': Normal(loc: 3.639733993790602, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6397, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs236', 'fn': Normal(loc: 3.584804639780235, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5848, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs237', 'fn': Normal(loc: 2.5869775667311004, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5870, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs238', 'fn': Normal(loc: 3.1303506610870184, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1304, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs239', 'fn': Normal(loc: 2.616108898166768, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6161, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs240', 'fn': Normal(loc: 4.328909057995868, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.3289, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs241', 'fn': Normal(loc: 3.309635612661997, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3096, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs242', 'fn': Normal(loc: 2.8184053762475787, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8184, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs243', 'fn': Normal(loc: 4.126038941914665, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1260, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs244', 'fn': Normal(loc: 4.7337783453944695, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.7338, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs245', 'fn': Normal(loc: 3.3951262001912283, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3951, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs246', 'fn': Normal(loc: 3.2281016040040518, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2281, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs247', 'fn': Normal(loc: 3.14854851433587, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1485, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs248', 'fn': Normal(loc: 4.605826322148348, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.6058, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs249', 'fn': Normal(loc: 3.3476543310617703, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3477, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs250', 'fn': Normal(loc: 3.6492814937035063, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6493, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs251', 'fn': Normal(loc: 3.851896707449989, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8519, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs252', 'fn': Normal(loc: 3.081782344033019, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0818, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs253', 'fn': Normal(loc: 3.2644461417129427, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2644, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs254', 'fn': Normal(loc: 2.825211471232348, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8252, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs255', 'fn': Normal(loc: 2.462737628979014, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4627, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs256', 'fn': Normal(loc: 3.8905610446459367, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8906, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs257', 'fn': Normal(loc: 2.8965381144616176, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8965, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs258', 'fn': Normal(loc: 2.7450136262023626, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7450, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs259', 'fn': Normal(loc: 3.2974924971176787, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2975, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs260', 'fn': Normal(loc: 3.1168615765653795, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1169, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs261', 'fn': Normal(loc: 2.806162026287466, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8062, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs262', 'fn': Normal(loc: 3.899911838549202, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8999, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs263', 'fn': Normal(loc: 2.4959660940661466, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4960, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs264', 'fn': Normal(loc: 3.600919785020067, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6009, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs265', 'fn': Normal(loc: 3.287979340130639, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2880, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs266', 'fn': Normal(loc: 3.5665771396451493, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5666, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs267', 'fn': Normal(loc: 3.4388482753552965, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4388, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs268', 'fn': Normal(loc: 3.540668515203878, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5407, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs269', 'fn': Normal(loc: 3.596538637313348, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5965, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs270', 'fn': Normal(loc: 2.8663097279041785, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8663, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs271', 'fn': Normal(loc: 3.521919271865305, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5219, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs272', 'fn': Normal(loc: 2.829576205855222, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8296, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs273', 'fn': Normal(loc: 3.446577331525295, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4466, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs274', 'fn': Normal(loc: 3.2084816369514852, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2085, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs275', 'fn': Normal(loc: 3.8209845441749897, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8210, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs276', 'fn': Normal(loc: 2.8021168105115324, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8021, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs277', 'fn': Normal(loc: 1.986844624212982, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.9868, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs278', 'fn': Normal(loc: 3.2303790667431587, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2304, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs279', 'fn': Normal(loc: 4.018429868057191, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0184, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs280', 'fn': Normal(loc: 3.095734439278343, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0957, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs281', 'fn': Normal(loc: 3.2634937227116145, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2635, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs282', 'fn': Normal(loc: 2.7241221261624236, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7241, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs283', 'fn': Normal(loc: 3.044077457974847, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0441, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs284', 'fn': Normal(loc: 2.6943138384417744, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6943, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs285', 'fn': Normal(loc: 2.7282411260939807, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7282, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs286', 'fn': Normal(loc: 2.479029782761736, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4790, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs287', 'fn': Normal(loc: 3.5298173950023912, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5298, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs288', 'fn': Normal(loc: 2.4695993496618365, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4696, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs289', 'fn': Normal(loc: 2.10549917813565, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.1055, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs290', 'fn': Normal(loc: 3.3975709009012847, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3976, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs291', 'fn': Normal(loc: 2.4023415090432594, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4023, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs292', 'fn': Normal(loc: 3.070968315396902, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0710, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs293', 'fn': Normal(loc: 3.559738080807084, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5597, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs294', 'fn': Normal(loc: 3.276788525439929, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2768, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs295', 'fn': Normal(loc: 2.6124894696488887, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6125, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs296', 'fn': Normal(loc: 3.8645188212138666, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8645, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs297', 'fn': Normal(loc: 2.6287297453505847, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6287, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs298', 'fn': Normal(loc: 2.3260386357901552, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3260, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs299', 'fn': Normal(loc: 1.7117592214690613, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.7118, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs300', 'fn': Normal(loc: 3.5440309316721543, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5440, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs301', 'fn': Normal(loc: 3.020691295813808, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0207, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs302', 'fn': Normal(loc: 3.504169016552224, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5042, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs303', 'fn': Normal(loc: 3.4723097467534614, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4723, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs304', 'fn': Normal(loc: 3.3541050132775987, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3541, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs305', 'fn': Normal(loc: 2.9500358039563763, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9500, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs306', 'fn': Normal(loc: 3.7105458434560843, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7105, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs307', 'fn': Normal(loc: 2.776375361763137, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7764, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs308', 'fn': Normal(loc: 3.3101203524714897, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3101, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs309', 'fn': Normal(loc: 2.6043618627240375, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6044, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs310', 'fn': Normal(loc: 2.5951225766702524, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5951, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs311', 'fn': Normal(loc: 2.2066158985850777, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.2066, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs312', 'fn': Normal(loc: 2.5950156276017937, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5950, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs313', 'fn': Normal(loc: 3.6070038767913077, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6070, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs314', 'fn': Normal(loc: 2.4961292509240804, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4961, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs315', 'fn': Normal(loc: 2.370164739143377, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3702, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs316', 'fn': Normal(loc: 2.1930024324520367, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.1930, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs317', 'fn': Normal(loc: 4.037902243833837, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0379, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs318', 'fn': Normal(loc: 4.0506715604226144, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0507, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs319', 'fn': Normal(loc: 2.1801529959228825, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.1802, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs320', 'fn': Normal(loc: 3.764183526488625, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7642, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs321', 'fn': Normal(loc: 3.0582478360173853, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0582, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs322', 'fn': Normal(loc: 3.4290915073728416, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4291, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs323', 'fn': Normal(loc: 4.440159664191701, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.4402, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs324', 'fn': Normal(loc: 3.1079619629844077, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1080, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs325', 'fn': Normal(loc: 2.599737415297455, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5997, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs326', 'fn': Normal(loc: 2.0973615738548066, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.0974, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs327', 'fn': Normal(loc: 3.344103694337565, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3441, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs328', 'fn': Normal(loc: 3.917275322927359, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9173, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs329', 'fn': Normal(loc: 4.8090444955203395, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.8090, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs330', 'fn': Normal(loc: 3.701409672047891, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7014, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs331', 'fn': Normal(loc: 3.343071680671579, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3431, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs332', 'fn': Normal(loc: 4.2706651938819284, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.2707, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs333', 'fn': Normal(loc: 2.9935358357076094, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9935, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs334', 'fn': Normal(loc: 3.4342020575062784, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4342, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs335', 'fn': Normal(loc: 3.5456699077019325, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5457, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs336', 'fn': Normal(loc: 3.545208905315725, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5452, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs337', 'fn': Normal(loc: 2.924422213469324, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9244, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs338', 'fn': Normal(loc: 3.491032382822587, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4910, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs339', 'fn': Normal(loc: 3.3178946665273368, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3179, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs340', 'fn': Normal(loc: 3.433977302467031, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4340, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs341', 'fn': Normal(loc: 2.95783822478137, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9578, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs342', 'fn': Normal(loc: 3.2043298089389833, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2043, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs343', 'fn': Normal(loc: 3.2665982193574306, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2666, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs344', 'fn': Normal(loc: 3.204687622765617, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2047, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs345', 'fn': Normal(loc: 3.099111928448824, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0991, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs346', 'fn': Normal(loc: 4.127873415444706, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1279, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs347', 'fn': Normal(loc: 4.083190619238996, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0832, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs348', 'fn': Normal(loc: 2.9615991056076654, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9616, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs349', 'fn': Normal(loc: 4.823403023808715, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.8234, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs350', 'fn': Normal(loc: 2.2930266976255647, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.2930, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs351', 'fn': Normal(loc: 3.5958012624411166, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5958, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs352', 'fn': Normal(loc: 3.317682237826207, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3177, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs353', 'fn': Normal(loc: 1.9341489819239133, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.9341, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs354', 'fn': Normal(loc: 3.8495110923036577, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8495, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs355', 'fn': Normal(loc: 2.789419986047027, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7894, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs356', 'fn': Normal(loc: 3.375704695679255, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3757, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs357', 'fn': Normal(loc: 3.1614758977369277, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1615, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs358', 'fn': Normal(loc: 3.495557630988154, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4956, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs359', 'fn': Normal(loc: 2.7279006602890257, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7279, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs360', 'fn': Normal(loc: 3.269271705126499, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2693, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs361', 'fn': Normal(loc: 3.6329144395879354, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6329, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs362', 'fn': Normal(loc: 1.95883536698397, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.9588, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs363', 'fn': Normal(loc: 2.8306955388277855, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8307, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs364', 'fn': Normal(loc: 4.183100029906096, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1831, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs365', 'fn': Normal(loc: 3.0448781126993607, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0449, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs366', 'fn': Normal(loc: 3.299010199666855, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2990, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs367', 'fn': Normal(loc: 2.740290060369247, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7403, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs368', 'fn': Normal(loc: 3.091890295550727, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0919, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs369', 'fn': Normal(loc: 2.776057521692206, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7761, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs370', 'fn': Normal(loc: 3.2596892360909697, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2597, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs371', 'fn': Normal(loc: 2.0722828072342603, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.0723, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs372', 'fn': Normal(loc: 1.9801642851936472, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.9802, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs373', 'fn': Normal(loc: 2.484121077798613, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4841, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs374', 'fn': Normal(loc: 3.3049525955684547, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3050, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs375', 'fn': Normal(loc: 2.808739887137012, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8087, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs376', 'fn': Normal(loc: 2.6131441404271705, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6131, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs377', 'fn': Normal(loc: 3.0139586284724715, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0140, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs378', 'fn': Normal(loc: 3.1439235006836665, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1439, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs379', 'fn': Normal(loc: 2.9508566736692714, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9509, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs380', 'fn': Normal(loc: 3.566816688969861, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5668, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs381', 'fn': Normal(loc: 4.302833977907162, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.3028, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs382', 'fn': Normal(loc: 2.8174954728000166, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8175, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs383', 'fn': Normal(loc: 3.8615386754421324, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8615, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs384', 'fn': Normal(loc: 3.4327848750582226, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4328, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs385', 'fn': Normal(loc: 3.651765259254177, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6518, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs386', 'fn': Normal(loc: 3.1150789110322603, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1151, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs387', 'fn': Normal(loc: 2.7566847096101603, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7567, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs388', 'fn': Normal(loc: 4.069320629058515, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0693, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs389', 'fn': Normal(loc: 3.5038817011338397, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5039, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs390', 'fn': Normal(loc: 4.2549456561288235, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.2549, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs391', 'fn': Normal(loc: 2.9429298787119036, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9429, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs392', 'fn': Normal(loc: 3.415501246981407, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4155, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs393', 'fn': Normal(loc: 2.958974744706664, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9590, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs394', 'fn': Normal(loc: 2.984730377933366, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9847, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs395', 'fn': Normal(loc: 3.3746860811918853, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3747, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs396', 'fn': Normal(loc: 3.9687320981242586, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9687, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs397', 'fn': Normal(loc: 2.7880956079698396, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7881, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs398', 'fn': Normal(loc: 3.6029436637920518, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6029, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs399', 'fn': Normal(loc: 2.710259880168328, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7103, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs400', 'fn': Normal(loc: 3.74295831450405, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7430, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs401', 'fn': Normal(loc: 2.981089776899614, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9811, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs402', 'fn': Normal(loc: 3.629087468699235, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6291, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs403', 'fn': Normal(loc: 3.90063425562208, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9006, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs404', 'fn': Normal(loc: 2.6563344678211642, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6563, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs405', 'fn': Normal(loc: 3.50815890158286, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5082, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs406', 'fn': Normal(loc: 3.1222790634270114, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1223, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs407', 'fn': Normal(loc: 2.820218533024004, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8202, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs408', 'fn': Normal(loc: 3.494760214130793, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4948, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs409', 'fn': Normal(loc: 2.5632197420916234, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5632, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs410', 'fn': Normal(loc: 3.057454284942324, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0575, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs411', 'fn': Normal(loc: 2.818610456519759, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8186, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs412', 'fn': Normal(loc: 3.2337979731587927, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2338, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs413', 'fn': Normal(loc: 4.53132423986537, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.5313, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs414', 'fn': Normal(loc: 3.568157042265459, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5682, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs415', 'fn': Normal(loc: 3.4078302879491797, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4078, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs416', 'fn': Normal(loc: 3.571213845448212, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5712, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs417', 'fn': Normal(loc: 3.8921898213802555, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8922, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs418', 'fn': Normal(loc: 3.666495888954991, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6665, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs419', 'fn': Normal(loc: 3.1284488006834787, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1284, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs420', 'fn': Normal(loc: 2.7944681658807027, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7945, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs421', 'fn': Normal(loc: 2.7396922598879634, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7397, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs422', 'fn': Normal(loc: 3.457267605099787, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4573, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs423', 'fn': Normal(loc: 3.077779284518439, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0778, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs424', 'fn': Normal(loc: 3.143804917417697, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1438, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs425', 'fn': Normal(loc: 2.8274473750526603, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8274, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs426', 'fn': Normal(loc: 3.0964239540280545, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0964, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs427', 'fn': Normal(loc: 3.0334774818469756, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0335, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs428', 'fn': Normal(loc: 3.401083028434781, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.4011, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs429', 'fn': Normal(loc: 3.3869006117031546, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3869, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs430', 'fn': Normal(loc: 3.3203177303707645, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3203, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs431', 'fn': Normal(loc: 2.527171591746846, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5272, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs432', 'fn': Normal(loc: 3.315705659977965, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3157, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs433', 'fn': Normal(loc: 2.9275152543955945, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9275, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs434', 'fn': Normal(loc: 2.53103424344333, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5310, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs435', 'fn': Normal(loc: 3.1202659903337224, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1203, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs436', 'fn': Normal(loc: 2.5952593918618954, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5953, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs437', 'fn': Normal(loc: 3.1526806391336395, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1527, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs438', 'fn': Normal(loc: 3.35722878174381, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3572, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs439', 'fn': Normal(loc: 2.9537349333518486, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9537, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs440', 'fn': Normal(loc: 2.8168640182253193, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8169, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs441', 'fn': Normal(loc: 3.175118560037812, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1751, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs442', 'fn': Normal(loc: 2.93620722983533, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9362, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs443', 'fn': Normal(loc: 3.371338995467635, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3713, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs444', 'fn': Normal(loc: 2.7811594784532, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7812, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs445', 'fn': Normal(loc: 2.3974088383410366, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3974, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs446', 'fn': Normal(loc: 4.104300677176729, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1043, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs447', 'fn': Normal(loc: 2.9135789921132442, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9136, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs448', 'fn': Normal(loc: 3.2277058373615812, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2277, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs449', 'fn': Normal(loc: 3.3769755035809297, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3770, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs450', 'fn': Normal(loc: 2.305489492286581, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3055, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs451', 'fn': Normal(loc: 2.219857209520511, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.2199, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs452', 'fn': Normal(loc: 3.142939454030694, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1429, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs453', 'fn': Normal(loc: 3.725757392185278, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.7258, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs454', 'fn': Normal(loc: 3.6008168015230786, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6008, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs455', 'fn': Normal(loc: 3.015568234721232, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0156, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs456', 'fn': Normal(loc: 3.0570311752746133, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0570, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs457', 'fn': Normal(loc: 2.896328219392539, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8963, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs458', 'fn': Normal(loc: 2.6483634007678676, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6484, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs459', 'fn': Normal(loc: 3.9065336770046826, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.9065, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs460', 'fn': Normal(loc: 2.966194593824471, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9662, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs461', 'fn': Normal(loc: 3.2765532628945686, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2766, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs462', 'fn': Normal(loc: 3.5000563149582287, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5001, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs463', 'fn': Normal(loc: 3.234810291083287, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2348, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs464', 'fn': Normal(loc: 2.430525646656457, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4305, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs465', 'fn': Normal(loc: 2.9502406091234907, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9502, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs466', 'fn': Normal(loc: 2.8634829098159496, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8635, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs467', 'fn': Normal(loc: 3.1683268483057367, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1683, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs468', 'fn': Normal(loc: 2.6277189954538085, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6277, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs469', 'fn': Normal(loc: 3.8416566322015893, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8417, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs470', 'fn': Normal(loc: 3.5229807047330253, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5230, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs471', 'fn': Normal(loc: 2.657767383144022, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6578, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs472', 'fn': Normal(loc: 2.921552699485287, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9216, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs473', 'fn': Normal(loc: 2.9707814061915987, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9708, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs474', 'fn': Normal(loc: 3.6295651202958004, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6296, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs475', 'fn': Normal(loc: 4.000398105256401, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.0004, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs476', 'fn': Normal(loc: 3.252403303227963, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2524, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs477', 'fn': Normal(loc: 3.539208490084594, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.5392, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs478', 'fn': Normal(loc: 3.1726317356878644, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1726, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs479', 'fn': Normal(loc: 3.651253073242957, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6513, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs480', 'fn': Normal(loc: 2.999374745393735, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9994, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs481', 'fn': Normal(loc: 2.266388074556247, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.2664, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs482', 'fn': Normal(loc: 2.3456855573687823, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3457, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs483', 'fn': Normal(loc: 4.172692647508595, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(4.1727, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs484', 'fn': Normal(loc: 3.0771403330995666, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.0771, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs485', 'fn': Normal(loc: 3.2215083023016895, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.2215, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs486', 'fn': Normal(loc: 2.383453728773394, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3835, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs487', 'fn': Normal(loc: 3.6858435174683635, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6858, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs488', 'fn': Normal(loc: 2.6729114125723203, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6729, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs489', 'fn': Normal(loc: 2.3245386919773923, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.3245, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs490', 'fn': Normal(loc: 3.332228015912346, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.3322, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs491', 'fn': Normal(loc: 2.6176313458259046, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.6176, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs492', 'fn': Normal(loc: 1.9832779742822786, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.9833, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs493', 'fn': Normal(loc: 3.8893263516733487, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.8893, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs494', 'fn': Normal(loc: 1.7830768729548983, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.7831, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs495', 'fn': Normal(loc: 1.9749463542899086, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(1.9749, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs496', 'fn': Normal(loc: 2.4047494565454453, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.4047, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs497', 'fn': Normal(loc: 3.1437802918751334, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.1438, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs498', 'fn': Normal(loc: 3.669435701080617, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(3.6694, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}Warmup:   0%|          | 0/14 [00:00, ?it/s]
+node : 
+{'type': 'sample', 'name': 'obs499', 'fn': Normal(loc: 2.8094330544305373, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.8094, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs500', 'fn': Normal(loc: 2.766631743575925, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7666, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs501', 'fn': Normal(loc: 2.768673949542232, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.7687, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs502', 'fn': Normal(loc: 2.985443488006126, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.9854, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'type': 'sample', 'name': 'obs503', 'fn': Normal(loc: 2.5953511494732466, scale: 0.5), 'is_observed': False, 'args': (), 'kwargs': {}, 'value': tensor(2.5954, dtype=torch.float64), 'infer': {}, 'scale': 1.0, 'mask': None, 'cond_indep_stack': (), 'done': True, 'stop': False, 'continuation': None}
+node : 
+{'name': '_RETURN', 'type': 'return', 'value': tensor([[3.8710, 3.7192, 3.1932, 3.3950, 3.6695, 3.1462, 3.9038, 2.9043, 3.2801,
+         3.1482, 4.1786, 2.3144, 2.0959, 2.6694, 2.9596, 2.6807, 3.3100, 1.9019,
+         2.8811, 3.3531, 2.7517, 2.3862, 3.4341, 3.4891, 4.3209, 3.2014, 4.0405,
+         3.3389],
+        [2.5148, 3.7065, 3.3393, 3.6024, 3.0795, 2.4384, 3.2721, 2.9509, 3.7406,
+         2.1588, 3.8759, 3.3082, 2.2542, 4.3633, 4.0415, 3.5069, 3.9454, 2.8901,
+         2.8635, 3.1278, 3.5142, 4.0766, 3.8131, 2.4621, 2.9332, 4.1401, 2.1047,
+         2.6803],
+        [4.3106, 2.9237, 3.0836, 3.6631, 2.7939, 3.2042, 2.4234, 2.5579, 2.9938,
+         2.4979, 2.9162, 3.5894, 4.2931, 3.6341, 2.8313, 2.8257, 2.8455, 3.8417,
+         2.9406, 3.4176, 2.7600, 3.5720, 2.5098, 3.1402, 2.8763, 3.2744, 3.2154,
+         3.6698],
+        [2.2433, 3.2972, 3.7633, 2.1301, 3.4609, 3.6294, 3.3338, 2.1451, 5.5833,
+         2.6820, 3.9401, 3.8797, 3.8544, 4.4226, 3.5788, 4.7534, 4.6165, 3.3672,
+         3.1754, 3.0729, 3.6115, 4.8991, 4.4744, 4.2564, 3.9354, 4.0201, 3.4284,
+         3.6751],
+        [2.8997, 3.1271, 1.9769, 3.1883, 3.1682, 1.9490, 2.8095, 2.7644, 2.7623,
+         2.3678, 2.9507, 3.2052, 2.9509, 2.7139, 2.6752, 2.4603, 2.6768, 2.3943,
+         3.1204, 3.2259, 2.4865, 2.8660, 2.8722, 3.3208, 1.6129, 3.3932, 2.5429,
+         2.8770],
+        [3.3031, 2.8015, 3.3173, 3.1068, 3.4627, 3.8054, 3.4690, 2.8086, 4.4970,
+         3.5585, 3.4141, 4.0017, 3.5286, 3.7703, 3.1395, 4.1711, 3.5770, 2.8633,
+         3.0262, 2.7463, 4.2742, 3.6442, 4.1343, 3.6198, 3.9787, 2.8764, 3.2263,
+         3.2894],
+        [2.7719, 3.1430, 3.0603, 2.9194, 2.9191, 2.7246, 2.2387, 3.5952, 3.5979,
+         2.6558, 4.2989, 3.6235, 3.2522, 2.8878, 3.1303, 3.9580, 4.1553, 2.6680,
+         4.6057, 3.1153, 3.2544, 3.0130, 2.8959, 3.0891, 2.6740, 3.0458, 3.0158,
+         3.3804],
+        [2.2112, 3.1169, 3.3072, 3.5507, 3.2219, 3.5196, 2.4424, 3.9856, 3.5678,
+         2.2097, 2.9443, 3.1447, 2.6947, 4.0262, 3.9758, 2.9788, 2.1134, 2.9146,
+         2.3684, 2.9667, 3.1720, 3.3556, 3.1730, 3.1295, 2.8001, 3.8415, 3.7029,
+         2.3979],
+        [2.5492, 3.6839, 3.5608, 2.9061, 3.0073, 3.9634, 3.3282, 3.0017, 3.9538,
+         3.2726, 4.4195, 3.6397, 3.5848, 2.5870, 3.1304, 2.6161, 4.3289, 3.3096,
+         2.8184, 4.1260, 4.7338, 3.3951, 3.2281, 3.1485, 4.6058, 3.3477, 3.6493,
+         3.8519],
+        [3.0818, 3.2644, 2.8252, 2.4627, 3.8906, 2.8965, 2.7450, 3.2975, 3.1169,
+         2.8062, 3.8999, 2.4960, 3.6009, 3.2880, 3.5666, 3.4388, 3.5407, 3.5965,
+         2.8663, 3.5219, 2.8296, 3.4466, 3.2085, 3.8210, 2.8021, 1.9868, 3.2304,
+         4.0184],
+        [3.0957, 3.2635, 2.7241, 3.0441, 2.6943, 2.7282, 2.4790, 3.5298, 2.4696,
+         2.1055, 3.3976, 2.4023, 3.0710, 3.5597, 3.2768, 2.6125, 3.8645, 2.6287,
+         2.3260, 1.7118, 3.5440, 3.0207, 3.5042, 3.4723, 3.3541, 2.9500, 3.7105,
+         2.7764],
+        [3.3101, 2.6044, 2.5951, 2.2066, 2.5950, 3.6070, 2.4961, 2.3702, 2.1930,
+         4.0379, 4.0507, 2.1802, 3.7642, 3.0582, 3.4291, 4.4402, 3.1080, 2.5997,
+         2.0974, 3.3441, 3.9173, 4.8090, 3.7014, 3.3431, 4.2707, 2.9935, 3.4342,
+         3.5457],
+        [3.5452, 2.9244, 3.4910, 3.3179, 3.4340, 2.9578, 3.2043, 3.2666, 3.2047,
+         3.0991, 4.1279, 4.0832, 2.9616, 4.8234, 2.2930, 3.5958, 3.3177, 1.9341,
+         3.8495, 2.7894, 3.3757, 3.1615, 3.4956, 2.7279, 3.2693, 3.6329, 1.9588,
+         2.8307],
+        [4.1831, 3.0449, 3.2990, 2.7403, 3.0919, 2.7761, 3.2597, 2.0723, 1.9802,
+         2.4841, 3.3050, 2.8087, 2.6131, 3.0140, 3.1439, 2.9509, 3.5668, 4.3028,
+         2.8175, 3.8615, 3.4328, 3.6518, 3.1151, 2.7567, 4.0693, 3.5039, 4.2549,
+         2.9429],
+        [3.4155, 2.9590, 2.9847, 3.3747, 3.9687, 2.7881, 3.6029, 2.7103, 3.7430,
+         2.9811, 3.6291, 3.9006, 2.6563, 3.5082, 3.1223, 2.8202, 3.4948, 2.5632,
+         3.0575, 2.8186, 3.2338, 4.5313, 3.5682, 3.4078, 3.5712, 3.8922, 3.6665,
+         3.1284],
+        [2.7945, 2.7397, 3.4573, 3.0778, 3.1438, 2.8274, 3.0964, 3.0335, 3.4011,
+         3.3869, 3.3203, 2.5272, 3.3157, 2.9275, 2.5310, 3.1203, 2.5953, 3.1527,
+         3.3572, 2.9537, 2.8169, 3.1751, 2.9362, 3.3713, 2.7812, 2.3974, 4.1043,
+         2.9136],
+        [3.2277, 3.3770, 2.3055, 2.2199, 3.1429, 3.7258, 3.6008, 3.0156, 3.0570,
+         2.8963, 2.6484, 3.9065, 2.9662, 3.2766, 3.5001, 3.2348, 2.4305, 2.9502,
+         2.8635, 3.1683, 2.6277, 3.8417, 3.5230, 2.6578, 2.9216, 2.9708, 3.6296,
+         4.0004],
+        [3.2524, 3.5392, 3.1726, 3.6513, 2.9994, 2.2664, 2.3457, 4.1727, 3.0771,
+         3.2215, 2.3835, 3.6858, 2.6729, 2.3245, 3.3322, 2.6176, 1.9833, 3.8893,
+         1.7831, 1.9749, 2.4047, 3.1438, 3.6694, 2.8094, 2.7666, 2.7687, 2.9854,
+         2.5954]], dtype=torch.float64)}
+Traceback (most recent call last):
+  File "project.py", line 361, in <module>
+    bpmf._main(ratings)
+  File "project.py", line 320, in _main
+    disable_progbar=False).run(self._model, ratingstmp)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/abstract_infer.py", line 226, in run
+    for i, vals in enumerate(self._traces(*args, **kwargs)):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/mcmc/mcmc.py", line 268, in _traces
+    for sample in self.sampler._traces(*args, **kwargs):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/mcmc/mcmc.py", line 206, in _traces
+    self.kernel.setup(self.warmup_steps, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/mcmc/hmc.py", line 382, in setup
+    self._initialize_model_properties()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/mcmc/hmc.py", line 365, in _initialize_model_properties
+    self._initialize_step_size()  # this method also caches z and its potential energy
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/mcmc/hmc.py", line 376, in _initialize_step_size
+    self._adapter.reset_step_size_adaptation()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/mcmc/adaptation.py", line 95, in reset_step_size_adaptation
+    self.step_size = self._find_reasonable_step_size()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/mcmc/hmc.py", line 252, in _find_reasonable_step_size
+    z, r, self._potential_energy, self.inverse_mass_matrix, step_size, z_grads=z_grads)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/ops/integrator.py", line 36, in velocity_verlet
+    z_grads)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/ops/integrator.py", line 45, in _single_step_verlet
+    z_grads = _potential_grad(potential_fn, z)[0] if z_grads is None else z_grads
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/ops/integrator.py", line 65, in _potential_grad
+    potential_energy = potential_fn(z)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/mcmc/hmc.py", line 166, in _potential_energy
+    trace = self._get_trace(z_constrained)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/infer/mcmc/hmc.py", line 137, in _get_trace
+    trace_poutine(*self._args, **self._kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/poutine/trace_messenger.py", line 147, in __call__
+    ret = self.fn(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/poutine/messenger.py", line 27, in _wraps
+    return fn(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/poutine/messenger.py", line 27, in _wraps
+    return fn(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/poutine/messenger.py", line 27, in _wraps
+    return fn(*args, **kwargs)
+  File "project.py", line 302, in _conditioned_model
+    return poutine.condition(model, data=data)()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/poutine/messenger.py", line 27, in _wraps
+    return fn(*args, **kwargs)
+  File "project.py", line 282, in _model
+    dist.Normal(Y[x,y], 0.5))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/primitives.py", line 112, in sample
+    apply_stack(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/poutine/runtime.py", line 190, in apply_stack
+    frame._process_message(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/poutine/messenger.py", line 119, in _process_message
+    return getattr(self, method_name)(msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/contextlib2.py", line 50, in inner
+    return func(*args, **kwds)
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pyro/poutine/enumerate_messenger.py", line 52, in _pyro_sample
+    if msg["done"] or not isinstance(msg["fn"], TorchDistributionMixin):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/abc.py", line 178, in __instancecheck__
+    def __instancecheck__(cls, instance):
+KeyboardInterrupt

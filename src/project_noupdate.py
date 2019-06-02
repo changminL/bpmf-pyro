@@ -161,8 +161,12 @@ class BPMF():
                          warmup_steps=warmup_steps,
                          num_chains=num_chains,
                          disable_progbar=False).run(self._model,sigma, ratingstmp)
+
         sites = ['u_temp_feature', 'i_temp_feature']
-        #marginal = posterior.marginal(sites=sites)
+        marginal = posterior.marginal(sites=sites)
+        marginal = torch.cat(list(marginal.support(flatten=True).values()),dim = -1).cpu().numpy()
+        print("_--- marginal : ")
+        print(marginal)
         Y = np.matmul(self.user_features_,self.item_features_.transpose())
         print("user_feature : ")
         print(self.user_features_)
@@ -192,5 +196,5 @@ if __name__ == "__main__":
     ratings[:,(0,1)] -= 1
     bpmf = BPMF(n_user=n_user,n_item=n_item, n_feature=10,
                 max_rating=5., min_rating=1., seed= 0, output_file = output_file)
-    sigma = 0.1 * torch.eye(int(n_user * n_item), dtype = torch.float64)
+    sigma = 0.5 * torch.eye(int(n_user * n_item), dtype = torch.float64)
     bpmf._main(ratings, sigma)
