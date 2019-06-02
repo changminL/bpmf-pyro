@@ -5,6 +5,8 @@ import logging
 
 import pandas as pd
 import torch
+from multiprocessing import Pool, Array, Process, Value, Manager
+import ctypes
 
 from six.moves import xrange
 import numpy as np
@@ -31,6 +33,8 @@ logging.basicConfig(format='%(message)s', level=logging.INFO)
 pyro.enable_validation(True)
 pyro.set_rng_seed(0)
 
+rand_state = RandomState(0)
+
 class BPMF():
     def __init__(self, n_user, n_item, n_feature, beta=2.0, beta_user=2.0,
                  df_user=None, mu0_user=0., beta_item=2.0, df_item=None,
@@ -46,7 +50,7 @@ class BPMF():
         self.max_rating = float(max_rating) if max_rating is not None else None
         self.min_rating = float(min_rating) if min_rating is not None else None
         self.converge = converge
-
+        self.data = None
         # Hyper Parameter
         self.beta = beta
 
@@ -95,7 +99,6 @@ class BPMF():
         # keep a csc matrix for fast col access (item update)
         self.ratings_csc_ = self.ratings_csr_.tocsc()
 
-        self.iter_ = 0
         self.output_file = output_file
         
     def _update_item_params(self):
@@ -194,7 +197,7 @@ class BPMF():
         # Gibbs sampling for user features
         #printProgressBar(0, self.n_user, prefix = 'Updating user features:', suffix = 'Complete', length = 40)
         for user_id in xrange(self.n_user):
-            #printProgressBar(user_id, self.n_user, prefix = 'Updating user features:' suffix = 'Complete', length = 40)
+            #printProgressBar(user_id, self.n_user, prefix = 'Updating user features:', suffix = 'Complete', length = 40)
             indices = self.ratings_csr_[user_id, :].indices
             features = self.item_features_[indices, :]
             rating = self.ratings_csr_[user_id, :].data - self.mean_rating_
@@ -214,10 +217,40 @@ class BPMF():
             temp_feature = pyro.sample('u_temp_feature' + str(user_id), dist.MultivariateNormal(mean, covariance_matrix=covar))
             self.user_features_[user_id, :] = temp_feature.detach().numpy().ravel()
             #-----------------------------------------------------------------------------------------------
-          
+
+    def _predict(self, data, is_train=False, avg_u_f=None, avg_i_f=None):
+        if not self.mean_rating_:
+            raise NotFittedError()
+
+        if not is_train:
+            u_features = self.user_features_.take(data.take(0, axis=1), axis=0)
+            i_features = self.item_features_.take(data.take(1, axis=1), axis=0)
+        else:
+            u_features = avg_u_f.take(data.take(0, axis=1), axis=0)
+            i_features = avg_i_f.take(data.take(1, axis=1), axis=0)
+
+        preds = np.sum(u_features * i_features, 1) + self.mean_rating_
+
+        if self.max_rating:
+            preds[preds > self.max_rating] = self.max_rating
+
+        if self.min_rating:
+            preds[preds < self.min_rating] = self.min_rating
+
+        return preds
+
+    def _init_shared(self, _shared):
+        global shared_pred
+
+        shared_pred = np.frombuffer(_shared.get_obj()).reshape(-1)
+
+    def _sample(self, s, e, p, sigma, p2):
+        for i in range(s.value, e.value):
+            p2[i] = pyro.sample("obs" + str(i), dist.Normal(p[i], sigma.value))
+
     def _model(self, sigma):
         self.iter_ += 1
-        #print("iteration : " + str(self.iter_))
+        print("iteration : " + str(self.iter_))
         #print("updating parameters")
         i_mu_mean, i_mu_var = self._update_item_params()
         u_mu_mean, u_mu_var = self._update_user_params()
@@ -251,88 +284,142 @@ class BPMF():
                 break
             except (RuntimeError, ValueError):
                 u_mu_var = 0.01 * torch.eye(self.n_feature,dtype=torch.float64)
+                
         self.mu_user = torch.reshape(self.mu_user, (self.n_feature,1)).detach().numpy()
         #-----------------------------------------------------------------------------------------------
 
-        #print("updating item features")
+        print("updating item features")
         self._update_item_features()
-        #print("Done")
-        #print("updating user_features")
+        print("Done")
+        print("updating user_features")
         self._update_user_features()
-        #print("Done")
+        print("Done")
 
-        Y = np.add(np.matmul(self.user_features_
-                      ,self.item_features_.transpose())
-           ,self.mean_rating_ * np.ones((self.n_user, self.n_item), dtype='float64'))
+        print("start to predict")
+        pred = self._predict(self.data)
+        print("Done")
 
-        for x in range(self.n_user):
-            for y in range(self.n_item):
-                if Y[x,y] > self.max_rating:
-                    Y[x,y] = self.max_rating
-                elif Y[x,y] < self.min_rating:
-                    Y[x,y] = self.min_rating
+        pred_len = len(pred)
+        pred = Variable(torch.from_numpy(pred))
+
+        pred2 = pred
+        pred2_n = pred2.numpy()
         
-        Y = torch.autograd.Variable(torch.from_numpy(Y))
-        Y2 = Y
-        for x in range(self.n_user):
-            for y in range(self.n_item):
-                Y2[x,y] = pyro.sample("obs" + str(x*self.n_item + y),dist.Normal(Y[x,y], 0.5))
-        return Y2 
+        threads = 32
+        jobs = []
+        batch_size = pred_len // threads
+    
+        pred2 = Array('d', pred2_n)
+        sig = Value('d', sigma)
+        start = Value('i', 0)
+        end = Value('i', batch_size)
+        for i in range(threads):
+            if(i == (threads - 1)):
+                end = Value('i', pred_len)
+            p = Process(target=self._sample, args=[start, end, pred, sig, pred2])
+            jobs.append(p)
+            start = Value('i', start.value + batch_size)
+            end = Value('i', end.value + batch_size)
 
+        for j in jobs:
+            j.start()
+
+        for j in jobs:
+            j.join()
+        
+        """
+        for i in range(pred_len):
+            print("obs[" + str(i) + "/" + str(pred_len)+ "]")
+            pred2[i] = pyro.sample("obs" + str(i), dist.Normal(pred[i], sigma))
+        print("5")
+        """
+        pred2 = Variable(torch.from_numpy(np.array(pred2[:])))
+        return pred2
+    """
+    def _create_data(self, data, rat, s, e):
+        for i in range(s, e):
+            data["obs" + str(i)] = torch.tensor(rat[i], dtype = torch.float64)
+    """
     def _conditioned_model(self,model, sigma, ratings):
         data = dict()
-        for x in range(self.n_user):
-            for y in range(self.n_item):
-                if ratings[x,y] != 0:
-                    data["obs" + str(x * self.n_item + y)] = torch.tensor(ratings[x,y], dtype = torch.float64)
-        ratings = torch.autograd.Variable(torch.from_numpy(ratings))
+        
+        rating = ratings.take(2, axis=1)
+        rating_len = len(rating)
+        """
+        threads = 32
+        jobs = []
+        batch_size = rating_len // threads
+    
+        manager = Manager()
+        data = manager.dict()
+        start = 0; end = batch_size;
+
+        for i in range(threads):
+            if(i == (threads - 1)):
+                end = rating_len
+            p = Process(target=self._create_data, args=[data, rating, start, end])
+            jobs.append(p)
+            start = start + batch_size
+            end = end + batch_size
+
+        for j in jobs:
+            j.start()
+
+        for j in jobs:
+            j.join()
+        """
+            
+        for i in range(rating_len):
+            data["obs" + str(i)] = torch.tensor(rating[i], dtype = torch.float64)
+        
+        #ratings = torch.autograd.Variable(torch.from_numpy(ratings))
         return poutine.condition(model, data=data)(sigma)
  
     #1000, 1000, 1 for defulat
-    def _main(self, ratings,sigma, jit=False, num_samples=10
-                  , warmup_steps=4, num_chains=1):
-        ratingstmp = np.zeros((self.n_user, self.n_item), dtype = 'float64')
-        for rat in ratings:
-            ratingstmp[rat[0],rat[1]] = rat[2]
+    def _main(self, ratings,sigma, jit=False, num_samples=8
+                  , warmup_steps=8, num_chains=1):
+
+        # split data to training & testing
+        train_pct = 0.9
+
+        rand_state.shuffle(ratings)
+        train_size = int(train_pct * ratings.shape[0])
+        train = ratings[:train_size]
+        validation = ratings[train_size:]
+
+        self.data = train
+       
         nuts_kernel = NUTS(self._conditioned_model, jit_compile=jit,)
         posterior = MCMC(nuts_kernel,
                          num_samples=num_samples,
                          warmup_steps=warmup_steps,
                          num_chains=num_chains,
-                         disable_progbar=False).run(self._model,sigma, ratingstmp)
+                         disable_progbar=False).run(self._model, sigma, train)
         sites = ['mu_item', 'mu_user'] + ['u_temp_feature' + str(user_id) for user_id in xrange(self.n_user)] + ['i_temp_feature' + str(item_id) for item_id in xrange(self.n_item)]
         marginal = posterior.marginal(sites=sites)
-
-        Y = np.add(np.matmul(self.user_features_
-                      ,self.item_features_.transpose())
-           ,self.mean_rating_ * np.ones((self.n_user, self.n_item), dtype='float64'))
-        print("user_feature : ")
-        print(self.user_features_)
-        print("item_features : ")
-        print(self.item_features_)
-        print("computed data : ")
-        print(Y)
-        print("truth data : ")
-        print(ratingstmp)
-        for x in range(self.n_user):
-            for y in range(self.n_item):
-                if ratingstmp[x,y] == 0.:
-                    Y[x,y] = 0.
-        print("0 removed computed data : ")
-        print(Y)
-        print("RMSE: " + str(RMSE(Y, ratingstmp)))
+        marginal = torch.cat(list(marginal.support(flatten=True).values()), dim=-1).cpu().numpy()
+        avg_mu_item = np.average(marginal[:, :self.n_feature], axis=0)
+        avg_mu_user = np.average(marginal[:, self.n_feature:2*self.n_feature], axis=0)
+        avg_u_temp_feature = np.average(marginal[:, 2*self.n_feature:2*self.n_feature + self.n_user*self.n_feature].reshape(-1,self.n_user,self.n_feature), axis=0)
+        avg_i_temp_feature = np.average(marginal[:, 2*self.n_feature + self.n_user*self.n_feature:].reshape(-1,self.n_item, self.n_feature), axis=0)
+        
+        train_preds = self._predict(train[:, :2], True, avg_u_temp_feature, avg_i_temp_feature)
+        train_rmse = RMSE(train_preds, train[:, 2])
+        val_preds = self._predict(validation[:, :2], True, avg_u_temp_feature, avg_i_temp_feature)
+        val_rmse = RMSE(val_preds, validation[:, 2])
+        print("After %d iteration, train RMSE: %.6f, validation RMSE: %.6f" % (self.iter, train_rmse, val_rmse))
 
             
 if __name__ == "__main__":
-    #print("Loading data....")
-    ratings = load_movielens_1m_ratings('../ml-1m/ratings-made.dat')
-    #print("Loaded")
+    print("Loading data....")
+    ratings = load_movielens_1m_ratings('../ml-1m/ratings.dat')
+    print("Loaded")
 
     output_file = open("mcmc_result.txt", 'w')
     n_user = max(ratings[:,0])
     n_item = max(ratings[:,1])
     ratings[:,(0,1)] -= 1
-    bpmf = BPMF(n_user=n_user,n_item=n_item, n_feature=10,
+    bpmf = BPMF(n_user=n_user,n_item=n_item, n_feature=30,
                 max_rating=5., min_rating=1., seed= 0, output_file = output_file)
-    sigma = 0.1 * torch.eye(int(n_user * n_item), dtype = torch.float64)
+    sigma = 0.5
     bpmf._main(ratings, sigma)
