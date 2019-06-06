@@ -39,5 +39,5 @@ python bpmf-pyro.py --num-samples 16 --warmup-steps 16 --n_feature 60 --n_thread
 
 Notes:
 ------
-- This code is not perfect. We just suggest how can we implement bpmf with pyro. I hope it will give you some hint when you try to implement other models which use MCMC inference methods. 
+- This code is not perfect. We just suggest how can we implement bpmf with pyro. I hope it will give you some hints when you try to implement other models which use the MCMC inference method. 
 - This is a project for a CS423(Probabilistic Programming, Spring 2019, KAIST) class.
