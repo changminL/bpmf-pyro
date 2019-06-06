@@ -100,7 +100,8 @@ class BPMF():
         self.ratings_csc_ = self.ratings_csr_.tocsc()
 
         self.output_file = output_file
-        
+        self.n_thread = 20
+
     def _update_item_params(self):
         N = self.n_item
         X_bar = np.mean(self.item_features_, 0).reshape((self.n_feature, 1))
@@ -286,7 +287,7 @@ class BPMF():
         pred2 = pred
         pred2_n = pred2.numpy()
         
-        threads = 32
+        threads = self.n_thread
         jobs = []
         batch_size = pred_len // threads
     
@@ -324,7 +325,8 @@ class BPMF():
  
     #1000, 1000, 1 for defulat
     def _main(self, ratings, sigma, args):
-
+        
+        self.n_thread = args.n_threads
         # split data to training & testing
         train_pct = 0.9
 
