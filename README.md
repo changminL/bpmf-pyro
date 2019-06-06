@@ -1,8 +1,5 @@
 # Bayesian Probabilistic Matrix Factorization with Pyro
 
-Recommend
-=========
-
 Bayesian Probabilistic Matrix Factorization implementation with Pyro
 
 Current model:
