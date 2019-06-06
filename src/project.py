@@ -180,13 +180,11 @@ class BPMF():
                     np.dot(self.alpha_item, self.mu_item))
 
             mean = np.dot(covar, temp)
-            #-----------------------------------------------------------------------------------------------
             mean = Variable(torch.from_numpy(mean))
             covar = Variable(torch.from_numpy(covar))
             mean = torch.reshape(mean, (-1,))
             temp_feature = pyro.sample('i_temp_feature' + str(item_id), dist.MultivariateNormal(mean, covariance_matrix=covar))  
             self.item_features_[item_id, :] = temp_feature.detach().numpy().ravel()
-            #-----------------------------------------------------------------------------------------------
 
     def _update_user_features(self):
         # Gibbs sampling for user features
@@ -241,8 +239,7 @@ class BPMF():
 
     def _model(self, sigma):
         self.iter_ += 1
-        print("iteration : " + str(self.iter_))
-        #print("updating parameters")
+
         i_mu_mean, i_mu_var = self._update_item_params()
         u_mu_mean, u_mu_var = self._update_user_params()
         for i in range(i_mu_var.shape[0]):
@@ -277,18 +274,11 @@ class BPMF():
                 u_mu_var = 0.1 * torch.eye(self.n_feature,dtype=torch.float64)
                 
         self.mu_user = torch.reshape(self.mu_user, (self.n_feature,1)).detach().numpy()
-        #-----------------------------------------------------------------------------------------------
-
-        print("updating item features")
+        
         self._update_item_features()
-        print("Done")
-        print("updating user_features")
         self._update_user_features()
-        print("Done")
-
-        print("start to predict")
+        
         pred = self._predict(self.data)
-        print("Done")
 
         pred_len = len(pred)
         pred = Variable(torch.from_numpy(pred))
@@ -318,57 +308,23 @@ class BPMF():
         for j in jobs:
             j.join()
         
-        """
-        for i in range(pred_len):
-            print("obs[" + str(i) + "/" + str(pred_len)+ "]")
-            pred2[i] = pyro.sample("obs" + str(i), dist.Normal(pred[i], sigma))
-        print("5")
-        """
         pred2 = Variable(torch.from_numpy(np.array(pred2[:])))
         return pred2
-    """
-    def _create_data(self, data, rat, s, e):
-        for i in range(s, e):
-            data["obs" + str(i)] = torch.tensor(rat[i], dtype = torch.float64)
-    """
+    
     def _conditioned_model(self,model, sigma, ratings):
         data = dict()
         
         rating = ratings.take(2, axis=1)
         rating_len = len(rating)
-        """
-        threads = 32
-        jobs = []
-        batch_size = rating_len // threads
-    
-        manager = Manager()
-        data = manager.dict()
-        start = 0; end = batch_size;
-
-        for i in range(threads):
-            if(i == (threads - 1)):
-                end = rating_len
-            p = Process(target=self._create_data, args=[data, rating, start, end])
-            jobs.append(p)
-            start = start + batch_size
-            end = end + batch_size
-
-        for j in jobs:
-            j.start()
-
-        for j in jobs:
-            j.join()
-        """
             
         for i in range(rating_len):
             data["obs" + str(i)] = torch.tensor(rating[i], dtype = torch.float64)
         
-        #ratings = torch.autograd.Variable(torch.from_numpy(ratings))
         return poutine.condition(model, data=data)(sigma)
  
     #1000, 1000, 1 for defulat
-    def _main(self, ratings,sigma, jit=False, num_samples=8
-                  , warmup_steps=8, num_chains=1):
+    def _main(self, ratings,sigma, jit=False, num_samples=4
+                  , warmup_steps=4, num_chains=1):
 
         # split data to training & testing
         train_pct = 0.9
@@ -381,11 +337,13 @@ class BPMF():
         self.data = train
        
         nuts_kernel = NUTS(self._conditioned_model, jit_compile=jit,)
+    
         posterior = MCMC(nuts_kernel,
                          num_samples=num_samples,
                          warmup_steps=warmup_steps,
                          num_chains=num_chains,
                          disable_progbar=False).run(self._model, sigma, train)
+        
         sites = ['mu_item', 'mu_user'] + ['u_temp_feature' + str(user_id) for user_id in xrange(self.n_user)] + ['i_temp_feature' + str(item_id) for item_id in xrange(self.n_item)]
         marginal = posterior.marginal(sites=sites)
         marginal = torch.cat(list(marginal.support(flatten=True).values()), dim=-1).cpu().numpy()
@@ -398,19 +356,19 @@ class BPMF():
         train_rmse = RMSE(train_preds, train[:, 2])
         val_preds = self._predict(validation[:, :2], True, avg_u_temp_feature, avg_i_temp_feature)
         val_rmse = RMSE(val_preds, validation[:, 2])
-        print("After %d iteration, train RMSE: %.6f, validation RMSE: %.6f" % (self.iter, train_rmse, val_rmse))
+        print("After %d iteration, train RMSE: %.6f, validation RMSE: %.6f" % (self.iter_, train_rmse, val_rmse))
 
             
 if __name__ == "__main__":
     print("Loading data....")
-    ratings = load_movielens_1m_ratings('../ml-1m/ratings.dat')
+    ratings = load_movielens_1m_ratings('../ml-1m/ratings-made.dat')
     print("Loaded")
 
     output_file = open("mcmc_result.txt", 'w')
     n_user = max(ratings[:,0])
     n_item = max(ratings[:,1])
     ratings[:,(0,1)] -= 1
-    bpmf = BPMF(n_user=n_user,n_item=n_item, n_feature=30,
+    bpmf = BPMF(n_user=n_user,n_item=n_item, n_feature=60,
                 max_rating=5., min_rating=1., seed= 0, output_file = output_file)
     sigma = 0.5
     bpmf._main(ratings, sigma)
